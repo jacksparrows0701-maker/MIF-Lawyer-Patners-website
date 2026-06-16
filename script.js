@@ -111,16 +111,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            submitBtn.textContent = 'Mengirim...';
-            submitBtn.disabled = true;
+            const waNumber = '6285759977665';
             
-            setTimeout(function() {
-                alert('Terima kasih ' + name + '! Pesan Anda telah berhasil dikirim. Tim kami akan segera menghubungi Anda.');
-                contactForm.reset();
-                submitBtn.textContent = 'Kirim Pesan';
-                submitBtn.disabled = false;
-            }, 1500);
+            const serviceNames = {
+                'cerai-talak': 'Cerai Talak (Suami Menggugat)',
+                'cerai-gugat': 'Cerai Gugat (Istri Menggugat)',
+                'nafkah': 'Nafkah Iddah & Mut\'ah',
+                'anak': 'Hak Asuh Anak',
+                'harta': 'Pembagian Harta Bersama',
+                'waris': 'Sengketa Waris',
+                'perwalian': 'Perwalian Anak'
+            };
+            
+            const serviceName = serviceNames[service] || service;
+            
+            const waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.%0A%0A' +
+                '*Nama:* ' + name + '%0A' +
+                '*Email:* ' + email + '%0A' +
+                '*Telepon:* ' + phone + '%0A' +
+                '*Jenis Perkara:* ' + serviceName + '%0A' +
+                '*Deskripsi:* ' + message;
+            
+            window.open('https://wa.me/' + waNumber + '?text=' + waMessage, '_blank');
+            
+            contactForm.reset();
         });
     }
 
