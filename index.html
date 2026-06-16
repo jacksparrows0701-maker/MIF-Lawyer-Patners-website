@@ -358,19 +358,38 @@
 
     <div class="wa-modal" id="waModal">
         <div class="wa-modal-content">
-            <h3>Kirim ke Lawyer Mana?</h3>
-            <button class="wa-modal-btn" id="waBtn1">
-                <span class="wa-modal-name">M. Ihsan Fauzi, S.H., M.H.</span>
-                <span class="wa-modal-no">+62 857 5997 7665</span>
-            </button>
-            <button class="wa-modal-btn" id="waBtn2">
-                <span class="wa-modal-name">Rudi Kurniawan, S.H.</span>
-                <span class="wa-modal-no">+62 812 8531 3618</span>
-            </button>
-            <button class="wa-modal-cancel" id="waCancel">Batal</button>
+            <h3>Scan QR Code untuk Chat WhatsApp</h3>
+            <div class="wa-qr-grid">
+                <div class="wa-qr-item">
+                    <div id="waQR1"></div>
+                    <span class="wa-modal-name">M. Ihsan Fauzi, S.H., M.H.</span>
+                    <span class="wa-modal-no">+62 857 5997 7665</span>
+                </div>
+                <div class="wa-qr-item">
+                    <div id="waQR2"></div>
+                    <span class="wa-modal-name">Rudi Kurniawan, S.H.</span>
+                    <span class="wa-modal-no">+62 812 8531 3618</span>
+                </div>
+            </div>
+            <button class="wa-modal-cancel" id="waCancel">Tutup</button>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new QRCode(document.getElementById('waQR1'), {
+                text: 'https://wa.me/6285759977665',
+                width: 120,
+                height: 120
+            });
+            new QRCode(document.getElementById('waQR2'), {
+                text: 'https://wa.me/6281285313618',
+                width: 120,
+                height: 120
+            });
+        });
+    </script>
 </body>
 </html>

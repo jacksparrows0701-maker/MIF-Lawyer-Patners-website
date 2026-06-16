@@ -905,3 +905,31 @@ body {
     background: #e53e3e;
     color: white;
 }
+
+.wa-qr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.wa-qr-item {
+    text-align: center;
+    padding: 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.wa-qr-item:hover {
+    border-color: #25D366;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.wa-qr-item img {
+    margin-bottom: 10px;
+}
+
+.wa-qr-item canvas {
+    margin-bottom: 10px;
+}

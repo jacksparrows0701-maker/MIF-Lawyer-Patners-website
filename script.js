@@ -136,16 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('waModal');
             modal.style.display = 'flex';
             
-            document.getElementById('waBtn1').onclick = function() {
-                modal.style.display = 'none';
-                window.location.href = 'https://wa.me/' + waNumber1 + '?text=' + waMessage;
-            };
-            
-            document.getElementById('waBtn2').onclick = function() {
-                modal.style.display = 'none';
-                window.location.href = 'https://wa.me/' + waNumber2 + '?text=' + waMessage;
-            };
-            
             document.getElementById('waCancel').onclick = function() {
                 modal.style.display = 'none';
             };
