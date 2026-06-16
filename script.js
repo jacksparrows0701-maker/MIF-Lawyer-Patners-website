@@ -133,10 +133,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 '*Jenis Perkara:* ' + serviceName + '%0A' +
                 '*Deskripsi:* ' + message;
             
-            window.open('https://wa.me/' + waNumber1 + '?text=' + waMessage, '_blank');
-            setTimeout(function() {
-                window.open('https://wa.me/' + waNumber2 + '?text=' + waMessage, '_blank');
-            }, 1000);
+            const pilihan = confirm('Kirim ke nomor mana?%0A%0A[OK] = +62 857 5997 7665%0A[Batal] = +62 812 8531 3618');
+            
+            if (pilihan) {
+                window.location.href = 'https://wa.me/' + waNumber1 + '?text=' + waMessage;
+            } else {
+                window.location.href = 'https://wa.me/' + waNumber2 + '?text=' + waMessage;
+            }
             
             contactForm.reset();
         });
