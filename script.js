@@ -96,6 +96,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const waFloat = document.getElementById('waFloat');
+    const waFooter = document.getElementById('waFooter');
+    const waBtn1 = document.getElementById('waBtn1');
+    const waBtn2 = document.getElementById('waBtn2');
+    const waCancel = document.getElementById('waCancel');
+    const waModal = document.getElementById('waModal');
+
+    function showWaModal() {
+        waModal.style.display = 'flex';
+    }
+
+    function hideWaModal() {
+        waModal.style.display = 'none';
+    }
+
+    if (waFloat) {
+        waFloat.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.';
+            showWaModal();
+        });
+    }
+
+    if (waFooter) {
+        waFooter.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.';
+            showWaModal();
+        });
+    }
+
+    if (waBtn1) {
+        waBtn1.addEventListener('click', function() {
+            hideWaModal();
+            window.location.href = 'https://wa.me/6285759977665?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
+        });
+    }
+
+    if (waBtn2) {
+        waBtn2.addEventListener('click', function() {
+            hideWaModal();
+            window.location.href = 'https://wa.me/6281285313618?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
+        });
+    }
+
+    if (waCancel) {
+        waCancel.addEventListener('click', function() {
+            hideWaModal();
+        });
+    }
+
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -111,9 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            const waNumber1 = '6285759977665';
-            const waNumber2 = '6281285313618';
-            
             const serviceNames = {
                 'cerai-talak': 'Cerai Talak (Suami Menggugat)',
                 'cerai-gugat': 'Cerai Gugat (Istri Menggugat)',
@@ -126,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const serviceName = serviceNames[service] || service;
             
-            const waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.%0A%0A' +
+            window.waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.%0A%0A' +
                 '*Nama:* ' + name + '%0A' +
                 '*Email:* ' + email + '%0A' +
                 '*Telepon:* ' + phone + '%0A' +
@@ -135,20 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const modal = document.getElementById('waModal');
             modal.style.display = 'flex';
-            
-            document.getElementById('waBtn1').onclick = function() {
-                modal.style.display = 'none';
-                window.location.href = 'https://wa.me/' + waNumber1 + '?text=' + waMessage;
-            };
-            
-            document.getElementById('waBtn2').onclick = function() {
-                modal.style.display = 'none';
-                window.location.href = 'https://wa.me/' + waNumber2 + '?text=' + waMessage;
-            };
-            
-            document.getElementById('waCancel').onclick = function() {
-                modal.style.display = 'none';
-            };
             
             contactForm.reset();
         });
