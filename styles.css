@@ -154,15 +154,17 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .nav-link {
     color: var(--bg-white);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 10px;
     transition: var(--transition);
     font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -1061,6 +1063,7 @@ body {
     height: 200px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
 }
 
 .blog-image img {
