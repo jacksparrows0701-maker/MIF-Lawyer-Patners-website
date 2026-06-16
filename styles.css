@@ -772,6 +772,10 @@ body {
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
     
     .process-steps {
         grid-template-columns: 1fr;
@@ -932,4 +936,61 @@ body {
 
 .wa-qr-item canvas {
     margin-bottom: 10px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.testimonial-stars {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    color: var(--text-gray);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.testimonial-author h4 {
+    color: var(--primary);
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+}
+
+.testimonial-author span {
+    color: var(--text-light);
+    font-size: 0.85rem;
 }
