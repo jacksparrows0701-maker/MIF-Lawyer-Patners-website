@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code - Mif Lawyer & Patners</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+        .qr-container {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid #1a365d;
+            border-radius: 15px;
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #c9a84c;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        #qrcode {
+            margin: 0 auto 20px;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        @media print {
+            body { padding: 20px; }
+            .qr-container { border: 2px solid #000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>Mif Lawyer & Patners</h1>
+        <h2>Pengacara Pengadilan Agama</h2>
+        <div id="qrcode"></div>
+        <p>Scan QR Code ini untuk mengakses website kami</p>
+        <p><strong>miflawpatners.netlify.app</strong></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        new QRCode(document.getElementById('qrcode'), {
+            text: 'https://miflawpatners.netlify.app',
+            width: 200,
+            height: 200
+        });
+    </script>
+</body>
+</html>
