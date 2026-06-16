@@ -111,7 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            const waNumber = '6285759977665';
+            const waNumber1 = '6285759977665';
+            const waNumber2 = '6281285313618';
             
             const serviceNames = {
                 'cerai-talak': 'Cerai Talak (Suami Menggugat)',
@@ -132,7 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 '*Jenis Perkara:* ' + serviceName + '%0A' +
                 '*Deskripsi:* ' + message;
             
-            window.open('https://wa.me/' + waNumber + '?text=' + waMessage, '_blank');
+            window.open('https://wa.me/' + waNumber1 + '?text=' + waMessage, '_blank');
+            window.open('https://wa.me/' + waNumber2 + '?text=' + waMessage, '_blank');
             
             contactForm.reset();
         });

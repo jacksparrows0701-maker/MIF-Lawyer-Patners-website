@@ -820,38 +820,3 @@ body {
         padding: 25px;
     }
 }
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.footer-logo-img {
-    height: 50px;
-    width: auto;
-    margin-bottom: 15px;
-}
-
-.team-single {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.btn-wa {
-    background: #25D366;
-    color: white;
-    font-size: 1.1rem;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.btn-wa:hover {
-    background: #1da851;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
