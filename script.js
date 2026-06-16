@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const waNumber1 = '6285759977665';
-            const waNumber2 = '6281285315618';
+            const waNumber2 = '6281285313618';
             
             const serviceNames = {
                 'cerai-talak': 'Cerai Talak (Suami Menggugat)',
