@@ -820,3 +820,88 @@ body {
         padding: 25px;
     }
 }
+
+.wa-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-modal-content {
+    background: var(--bg-white);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.wa-modal-content h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.wa-modal-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border: 2px solid #25D366;
+    background: #f0faf4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.wa-modal-btn:hover {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.wa-modal-btn:hover .wa-modal-name,
+.wa-modal-btn:hover .wa-modal-no {
+    color: white;
+}
+
+.wa-modal-name {
+    display: block;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.wa-modal-no {
+    display: block;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.wa-modal-cancel {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: var(--border);
+    color: var(--text-gray);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 5px;
+    transition: var(--transition);
+}
+
+.wa-modal-cancel:hover {
+    background: #e53e3e;
+    color: white;
+}
