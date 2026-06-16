@@ -134,7 +134,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 '*Deskripsi:* ' + message;
             
             window.open('https://wa.me/' + waNumber1 + '?text=' + waMessage, '_blank');
-            window.open('https://wa.me/' + waNumber2 + '?text=' + waMessage, '_blank');
+            setTimeout(function() {
+                window.open('https://wa.me/' + waNumber2 + '?text=' + waMessage, '_blank');
+            }, 1000);
             
             contactForm.reset();
         });
