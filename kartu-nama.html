@@ -156,6 +156,47 @@
             height: 100%;
             background: #c9a84c;
         }
+        .card-back {
+            width: 83mm;
+            height: 50mm;
+            background: linear-gradient(135deg, #1a365d 0%, #0f2440 100%);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .back-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .back-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .back-logo span {
+            color: #c9a84c;
+        }
+        .back-tagline {
+            font-size: 8px;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .back-address {
+            position: absolute;
+            bottom: 8px;
+            font-size: 6px;
+            color: #718096;
+            text-align: center;
+            z-index: 1;
+        }
         @media print {
             body {
                 background: white;
@@ -212,6 +253,18 @@
             <div class="card-right">
                 <div class="qr-code" id="qr2"></div>
                 <div class="qr-label">Scan untuk<br>WhatsApp</div>
+            </div>
+        </div>
+
+        <!-- Bagian Belakang -->
+        <div class="card-back">
+            <div class="card-logo-bg"></div>
+            <div class="back-content">
+                <div class="back-logo">Mif Lawyer & <span>Patners</span></div>
+                <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
+            </div>
+            <div class="back-address">
+                Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat
             </div>
         </div>
     </div>
