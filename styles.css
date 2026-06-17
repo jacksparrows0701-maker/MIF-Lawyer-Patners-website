@@ -281,7 +281,15 @@ body {
     width: 500px;
     height: 500px;
     object-fit: contain;
-    border-radius: 50%;
+}
+
+.hero-subtitle-motto {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    color: var(--accent);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .hero::before {
@@ -304,12 +312,12 @@ body {
 .hero-title {
     font-size: 3.5rem;
     color: var(--bg-white);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.2;
 }
 
 .hero-title span {
-    color: var(--accent);
+    color: inherit;
 }
 
 .hero-subtitle {
