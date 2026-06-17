@@ -8,11 +8,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --primary: #c9a84c;
-    --primary-dark: #b8923a;
-    --primary-light: #d4b55a;
-    --accent: #c9a84c;
-    --accent-dark: #b8923a;
+    --primary: #e8c547;
+    --primary-dark: #d4b55a;
+    --primary-light: #f0d060;
+    --accent: #e8c547;
+    --accent-dark: #d4b55a;
     --text-dark: #f5f5f5;
     --text-gray: #999999;
     --text-light: #777777;
@@ -94,6 +94,7 @@ body {
     font-size: 1.2rem;
     color: var(--accent);
     letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(232,197,71,0.3);
 }
 .logo-img {
     height: 40px;
@@ -224,6 +225,7 @@ body {
     letter-spacing: 4px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(232,197,71,0.4);
 }
 .hero-subtitle {
     font-size: 1.1rem;
@@ -253,6 +255,7 @@ body {
     font-weight: 800;
     color: var(--accent);
     display: block;
+    text-shadow: 0 0 15px rgba(232,197,71,0.4);
 }
 .stat-label {
     font-size: 0.85rem;
@@ -417,7 +420,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-    background: rgba(201,168,76,0.1);
+    background: rgba(232,197,71,0.1);
     border-radius: 50%;
 }
 .service-card h3 {
@@ -437,6 +440,7 @@ body {
     font-weight: 600;
     font-size: 0.9rem;
     transition: var(--transition);
+    text-shadow: 0 0 8px rgba(232,197,71,0.2);
 }
 .service-link:hover { color: var(--primary); }
 
@@ -554,6 +558,7 @@ body {
     font-size: 0.9rem;
     display: flex;
     gap: 3px;
+    text-shadow: 0 0 8px rgba(232,197,71,0.3);
 }
 .testimonial-text {
     font-style: italic;
@@ -776,6 +781,7 @@ body {
     font-family: 'Pinyon Script', cursive;
     font-size: 1.3rem;
     color: var(--accent);
+    text-shadow: 0 0 10px rgba(232,197,71,0.3);
 }
 .footer-col p {
     color: rgba(255,255,255,0.6);
@@ -988,7 +994,7 @@ body {
 .article-category {
     display: inline-block;
     background: var(--accent);
-    color: var(--primary-dark);
+    color: #0d0d0d;
     padding: 5px 18px;
     border-radius: 15px;
     font-size: 0.8rem;
