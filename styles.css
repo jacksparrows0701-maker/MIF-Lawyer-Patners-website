@@ -166,7 +166,15 @@ body {
     border: 2px solid var(--accent);
 }
 
-.logo span {
+.logo-vivaldi {
+    font-family: 'Vivaldi', cursive;
+    font-size: 1.4rem;
+    color: var(--bg-white);
+}
+
+.logo-edwardian {
+    font-family: 'Edwardian Script ITC', cursive;
+    font-size: 1.3rem;
     color: var(--accent);
 }
 
@@ -770,7 +778,15 @@ body {
     margin-bottom: 15px;
 }
 
-.footer-logo span {
+.footer-logo .logo-vivaldi {
+    font-family: 'Vivaldi', cursive;
+    font-size: 1.8rem;
+    color: var(--bg-white);
+}
+
+.footer-logo .logo-edwardian {
+    font-family: 'Edwardian Script ITC', cursive;
+    font-size: 1.6rem;
     color: var(--accent);
 }
 
