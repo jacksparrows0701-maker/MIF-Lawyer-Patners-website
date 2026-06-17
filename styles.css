@@ -760,7 +760,7 @@ body {
     position: fixed;
     bottom: 95px;
     right: 25px;
-    z-index: 998;
+    z-index: 1001;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

@@ -237,22 +237,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const waTooltipClose = document.getElementById('waTooltipClose');
     const waFloat = document.getElementById('waFloat');
 
+    console.log('WA Tooltip: init', { waTooltip, waFloat });
+
     if (waTooltip && waFloat) {
         if (localStorage.getItem('waTooltipDismissed') === 'true') {
+            console.log('WA Tooltip: dismissed in localStorage');
             waTooltip.style.display = 'none';
         } else {
-            // Icon WA pulse setelah 3 detik
+            console.log('WA Tooltip: showing in 2s');
+            // Icon WA pulse setelah 2 detik
             setTimeout(function() {
+                console.log('WA Tooltip: pulse');
                 waFloat.classList.add('pulse');
+            }, 2000);
+
+            // Tooltip muncul setelah 3 detik
+            setTimeout(function() {
+                console.log('WA Tooltip: show');
+                waTooltip.classList.add('show');
             }, 3000);
 
-            // Tooltip muncul setelah 5 detik
+            // Tooltip hilang setelah 8 detik
             setTimeout(function() {
-                waTooltip.classList.add('show');
-            }, 5000);
-
-            // Tooltip hilang setelah 10 detik
-            setTimeout(function() {
+                console.log('WA Tooltip: disappear');
                 if (waTooltip.classList.contains('show')) {
                     waTooltip.classList.add('disappear');
                     setTimeout(function() {
@@ -261,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         waFloat.classList.remove('pulse');
                     }, 500);
                 }
-            }, 10000);
+            }, 8000);
         }
 
         // Klik tooltip bubble → buka modal
