@@ -235,7 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // WA Tooltip Speech Bubble
     const waTooltip = document.getElementById('waTooltip');
     const waTooltipClose = document.getElementById('waTooltipClose');
-    const waFloat = document.getElementById('waFloat');
 
     console.log('WA Tooltip: init', { waTooltip, waFloat });
 
