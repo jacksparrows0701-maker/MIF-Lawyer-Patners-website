@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTop = document.getElementById('backToTop');
     const contactForm = document.getElementById('contactForm');
 
+    // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -13,12 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (window.scrollY > 300) {
-            backToTop.classList.add('show');
+            backToTop.classList.add('visible');
         } else {
-            backToTop.classList.remove('show');
+            backToTop.classList.remove('visible');
         }
     });
 
+    // Mobile menu toggle
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         this.classList.toggle('active');
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Stats counter animation
     const statNumbers = document.querySelectorAll('.stat-number');
     let animated = false;
 
@@ -81,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animateStats();
     window.addEventListener('scroll', animateStats);
 
+    // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(function(question) {
         question.addEventListener('click', function() {
             const faqItem = this.parentElement;
@@ -96,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // WhatsApp modal
     const waFloat = document.getElementById('waFloat');
     const waFooter = document.getElementById('waFooter');
     const waBtn1 = document.getElementById('waBtn1');
@@ -104,11 +110,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const waModal = document.getElementById('waModal');
 
     function showWaModal() {
-        waModal.style.display = 'flex';
+        waModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     function hideWaModal() {
-        waModal.style.display = 'none';
+        waModal.classList.remove('active');
+        document.body.style.overflow = '';
     }
 
     if (waFloat) {
@@ -147,6 +155,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Close modal on backdrop click
+    if (waModal) {
+        waModal.addEventListener('click', function(e) {
+            if (e.target === waModal) {
+                hideWaModal();
+            }
+        });
+    }
+
+    // Contact form
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -181,13 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 '*Jenis Perkara:* ' + serviceName + '%0A' +
                 '*Deskripsi:* ' + message;
             
-            const modal = document.getElementById('waModal');
-            modal.style.display = 'flex';
-            
+            showWaModal();
             contactForm.reset();
         });
     }
 
+    // Scroll animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -196,16 +213,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.service-card, .process-step, .faq-item').forEach(function(el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    document.querySelectorAll('.service-card, .process-step, .faq-item, .testimonial-card, .blog-card, .team-card, .about-content, .contact-grid, .maps-grid').forEach(function(el) {
+        el.classList.add('fade-in');
         observer.observe(el);
+    });
+
+    // Parallax effect on hero
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const heroLogo = document.querySelector('.hero-logo-bg');
+        if (heroLogo && scrolled < window.innerHeight) {
+            heroLogo.style.transform = 'translate(-50%, calc(-50% + ' + (scrolled * 0.3) + 'px))';
+        }
     });
 });
