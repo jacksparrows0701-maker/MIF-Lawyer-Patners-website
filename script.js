@@ -232,69 +232,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // WA Tooltip Speech Bubble
-    const waTooltip = document.getElementById('waTooltip');
-    const waTooltipClose = document.getElementById('waTooltipClose');
-
-    console.log('WA Tooltip: init', { waTooltip, waFloat });
+    // WA Tooltip Speech Bubble — 5× cycle
+    var waTooltip = document.getElementById('waTooltip');
+    var waTooltipClose = document.getElementById('waTooltipClose');
 
     if (waTooltip && waFloat) {
         if (localStorage.getItem('waTooltipDismissed') === 'true') {
-            console.log('WA Tooltip: dismissed in localStorage');
             waTooltip.style.display = 'none';
         } else {
-            console.log('WA Tooltip: showing in 2s');
-            // Icon WA pulse setelah 2 detik
-            setTimeout(function() {
-                console.log('WA Tooltip: pulse');
+            var showCount = 0;
+            var maxShow = 5;
+            var displayTime = 8000;
+            var gapTime = 10000;
+
+            function showCycle() {
+                if (showCount >= maxShow) return;
+                showCount++;
+
                 waFloat.classList.add('pulse');
-            }, 2000);
-
-            // Tooltip muncul setelah 3 detik
-            setTimeout(function() {
-                console.log('WA Tooltip: show');
                 waTooltip.classList.add('show');
-            }, 3000);
 
-            // Tooltip hilang setelah 8 detik
-            setTimeout(function() {
-                console.log('WA Tooltip: disappear');
-                if (waTooltip.classList.contains('show')) {
+                setTimeout(function() {
                     waTooltip.classList.add('disappear');
                     setTimeout(function() {
                         waTooltip.classList.remove('show');
                         waTooltip.classList.remove('disappear');
                         waFloat.classList.remove('pulse');
+
+                        if (showCount < maxShow) {
+                            setTimeout(showCycle, gapTime);
+                        }
                     }, 500);
-                }
-            }, 8000);
+                }, displayTime);
+            }
+
+            setTimeout(showCycle, 3000);
         }
 
-        // Klik tooltip bubble → buka modal
+        function dismissTooltip() {
+            localStorage.setItem('waTooltipDismissed', 'true');
+            waTooltip.classList.add('disappear');
+            setTimeout(function() {
+                waTooltip.classList.remove('show');
+                waTooltip.classList.remove('disappear');
+                waFloat.classList.remove('pulse');
+            }, 500);
+        }
+
         if (waTooltipClose) {
             waTooltipClose.addEventListener('click', function(e) {
                 e.stopPropagation();
-                waTooltip.classList.add('disappear');
-                localStorage.setItem('waTooltipDismissed', 'true');
-                setTimeout(function() {
-                    waTooltip.classList.remove('show');
-                    waTooltip.classList.remove('disappear');
-                }, 500);
+                dismissTooltip();
             });
         }
 
-        // Klik teks → buka modal
         var waTooltipText = document.querySelector('.wa-tooltip-text');
         if (waTooltipText) {
             waTooltipText.style.cursor = 'pointer';
             waTooltipText.addEventListener('click', function() {
                 document.getElementById('waModal').classList.add('active');
-                localStorage.setItem('waTooltipDismissed', 'true');
-                waTooltip.classList.add('disappear');
-                setTimeout(function() {
-                    waTooltip.classList.remove('show');
-                    waTooltip.classList.remove('disappear');
-                }, 500);
+                dismissTooltip();
             });
         }
     }
