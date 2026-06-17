@@ -81,8 +81,70 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #0d0d0d;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loading-logo-vivaldi {
+            font-family: 'Vivaldi', cursive;
+            font-size: 2rem;
+            color: #fff;
+        }
+        .loading-logo-edwardian {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 1.8rem;
+            color: #c9a84c;
+        }
+        .loading-bar {
+            width: 200px;
+            height: 3px;
+            background: #2a2a2a;
+            border-radius: 3px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        .loading-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #c9a84c, #d4b55a);
+            border-radius: 3px;
+            animation: loadingFill 1.5s ease forwards;
+        }
+        @keyframes loadingFill {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .typed-cursor {
+            color: #c9a84c;
+            font-weight: 100;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
+    <div class="loading-screen" id="loadingScreen">
+        <div>
+            <span class="loading-logo-vivaldi">Mif Lawyer &</span><br>
+            <span class="loading-logo-edwardian">Patners</span>
+        </div>
+        <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    </div>
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="logo"><span class="logo-vivaldi">Mif Lawyer &</span><br><span class="logo-edwardian">Patners</span></a>
@@ -108,12 +170,12 @@
 
     <header class="hero" id="home">
         <div class="hero-logo-bg">
-            <img src="images/logo.jpg" alt="" class="hero-logo-img">
+            <img src="images/logo.jpg" alt="" class="hero-logo-img" loading="lazy">
         </div>
         <div class="hero-content">
             <h1 class="hero-title"><span class="logo-vivaldi" style="font-size: 3.5rem;">Mif Lawyer &</span><br><span class="logo-edwardian" style="font-size: 2.5rem;">Patners</span></h1>
             <p class="hero-subtitle-motto">IUS GENTIUM IUSTITIA</p>
-            <p class="hero-subtitle">Kami spesialis menangani perkara di Pengadilan Agama dengan pengalaman lebih dari 5 tahun. Perceraian, nafkah, harta bersama, waris, dan perwalian.</p>
+            <p class="hero-subtitle">Kami spesialis menangani <span id="typewriter"></span></p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary btn-lg">Konsultasi Gratis</a>
                 <a href="#services" class="btn btn-outline btn-lg">Layanan Kami</a>
@@ -144,7 +206,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-img-box">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Kantor Hukum Pengadilan Agama">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Kantor Hukum Pengadilan Agama" loading="lazy">
                     </div>
                 </div>
                 <div class="about-text">
@@ -181,7 +243,7 @@
             <div class="team-grid">
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="images/muhammad ihsan fauzi, S.H., M.H..jpg" alt="M. Ihsan Fauzi, S.H., M.H.">
+                        <img src="images/muhammad ihsan fauzi, S.H., M.H..jpg" alt="M. Ihsan Fauzi, S.H., M.H." loading="lazy">
                     </div>
                     <div class="team-info">
                         <h3>M. Ihsan Fauzi, S.H., M.H.</h3>
@@ -194,7 +256,7 @@
                 </div>
                 <div class="team-card">
                     <div class="team-photo">
-                        <img src="images/Rudi Kurniawa, S.H..jpeg" alt="Rudi Kurniawan, S.H.">
+                        <img src="images/Rudi Kurniawa, S.H..jpeg" alt="Rudi Kurniawan, S.H." loading="lazy">
                     </div>
                     <div class="team-info">
                         <h3>Rudi Kurniawan, S.H.</h3>
@@ -450,7 +512,7 @@
                 <div class="blog-card">
                     <a href="artikel/5-hal-sebelum-cerai.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600" alt="Perceraian">
+                            <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600" alt="Perceraian" loading="lazy">
                             <span class="blog-category">Perceraian</span>
                         </div>
                         <div class="blog-content">
@@ -463,7 +525,7 @@
                 <div class="blog-card">
                     <a href="artikel/hak-asuh-anak-islam.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600" alt="Hak Asuh Anak">
+                            <img src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600" alt="Hak Asuh Anak" loading="lazy">
                             <span class="blog-category">Hak Asuh Anak</span>
                         </div>
                         <div class="blog-content">
@@ -476,7 +538,7 @@
                 <div class="blog-card">
                     <a href="artikel/nafkah-iddah.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600" alt="Nafkah Iddah">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600" alt="Nafkah Iddah" loading="lazy">
                             <span class="blog-category">Nafkah</span>
                         </div>
                         <div class="blog-content">
@@ -489,7 +551,7 @@
                 <div class="blog-card">
                     <a href="artikel/isbat-nikah.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Isbat Nikah">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Isbat Nikah" loading="lazy">
                             <span class="blog-category">Isbat Nikah</span>
                         </div>
                         <div class="blog-content">
@@ -502,7 +564,7 @@
                 <div class="blog-card">
                     <a href="artikel/waris-islam.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Waris Islam">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Waris Islam" loading="lazy">
                             <span class="blog-category">Waris</span>
                         </div>
                         <div class="blog-content">
@@ -515,7 +577,7 @@
                 <div class="blog-card">
                     <a href="artikel/mutah.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Mut'ah">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Mut'ah" loading="lazy">
                             <span class="blog-category">Nafkah</span>
                         </div>
                         <div class="blog-content">
@@ -528,7 +590,7 @@
                 <div class="blog-card">
                     <a href="artikel/hak-waris-anak-luar-nikah.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Hak Waris Anak">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Hak Waris Anak" loading="lazy">
                             <span class="blog-category">Waris</span>
                         </div>
                         <div class="blog-content">
@@ -541,7 +603,7 @@
                 <div class="blog-card">
                     <a href="artikel/mediasi-pengadilan-agama.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Mediasi">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Mediasi" loading="lazy">
                             <span class="blog-category">Tips</span>
                         </div>
                         <div class="blog-content">
@@ -554,7 +616,7 @@
                 <div class="blog-card">
                     <a href="artikel/banding-pengadilan-agama.html" class="blog-link-block">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Banding Putusan">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" alt="Banding Putusan" loading="lazy">
                             <span class="blog-category">Informasi</span>
                         </div>
                         <div class="blog-content">
@@ -728,8 +790,15 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
     <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').classList.add('hide');
+            }, 1800);
+        });
+
         AOS.init({
             duration: 800,
             once: true,
@@ -751,6 +820,23 @@
                 delay: 4000,
                 disableOnInteraction: false
             }
+        });
+
+        new Typed('#typewriter', {
+            strings: [
+                'perceraian di Pengadilan Agama',
+                'nafkah iddah & mut\'ah',
+                'hak asuh anak',
+                'pembagian harta bersama',
+                'sengketa waris',
+                'perwalian anak'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
         });
     </script>
 </body>
