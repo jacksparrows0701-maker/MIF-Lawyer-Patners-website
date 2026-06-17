@@ -85,20 +85,31 @@
         }
         .logo-small-vivaldi {
             font-family: 'Vivaldi', cursive;
-            font-size: 13px;
+            font-size: 16px;
             color: #c9a84c;
+            line-height: 1;
         }
         .logo-small-edwardian {
             font-family: 'Edwardian Script ITC', cursive;
             font-size: 14px;
             color: #c9a84c;
+            line-height: 1;
+            margin-top: -3px;
         }
         .logo-subtitle {
-            font-family: 'Garamond', 'Times New Roman', serif;
+            font-family: 'Times New Roman', serif;
             font-size: 7px;
-            color: #a0aec0;
+            color: #c9a84c;
             letter-spacing: 3px;
+            margin-top: 5px;
             margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .logo-line {
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to bottom, #c9a84c 0%, #c9a84c 40%, transparent 40%, transparent 60%, #c9a84c 60%, #c9a84c 100%);
+            margin-bottom: 10px;
         }
         .card-name {
             font-size: 14px;
@@ -185,21 +196,31 @@
         }
         .back-logo-vivaldi {
             font-family: 'Vivaldi', cursive;
-            font-size: 26px;
+            font-size: 32px;
             color: #ffffff;
+            line-height: 1;
         }
         .back-logo-edwardian {
             font-family: 'Edwardian Script ITC', cursive;
             font-size: 28px;
             color: #c9a84c;
-            margin-bottom: 3px;
+            line-height: 1;
+            margin-top: -5px;
         }
         .back-subtitle {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            font-size: 9px;
-            color: #a0aec0;
+            font-family: 'Times New Roman', serif;
+            font-size: 10px;
+            color: #c9a84c;
             letter-spacing: 3px;
-            margin-bottom: 5px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .back-line {
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(to bottom, #c9a84c 0%, #c9a84c 40%, transparent 40%, transparent 60%, #c9a84c 60%, #c9a84c 100%);
+            margin: 0 auto 8px;
         }
         .back-tagline {
             font-size: 8px;
@@ -235,9 +256,10 @@
             <div class="card-logo-bg"></div>
             <div class="accent-bar"></div>
             <div class="card-left">
-                <div class="logo-small-vivaldi">Mif Lawyer & </div>
-                <div class="logo-small-edwardian">Patners</div>
+                <div class="logo-small-vivaldi">Mif Lawyer</div>
+                <div class="logo-small-edwardian">& Partners</div>
                 <div class="logo-subtitle">IUS GENTIUM IUSTITIA</div>
+                <div class="logo-line"></div>
                 <div class="card-name">M. Ihsan Fauzi, S.H., M.H.</div>
                 <div class="card-title">Managing Partner</div>
                 <div class="card-divider"></div>
@@ -259,9 +281,10 @@
             <div class="card-logo-bg"></div>
             <div class="accent-bar"></div>
             <div class="card-left">
-                <div class="logo-small-vivaldi">Mif Lawyer & </div>
-                <div class="logo-small-edwardian">Patners</div>
+                <div class="logo-small-vivaldi">Mif Lawyer</div>
+                <div class="logo-small-edwardian">& Partners</div>
                 <div class="logo-subtitle">IUS GENTIUM IUSTITIA</div>
+                <div class="logo-line"></div>
                 <div class="card-name">Rudi Kurniawan, S.H.</div>
                 <div class="card-title">Associate Lawyer</div>
                 <div class="card-divider"></div>
@@ -282,9 +305,10 @@
         <div class="card-back">
             <div class="card-logo-bg"></div>
             <div class="back-content">
-                <div class="back-logo-vivaldi">Mif Lawyer &</div>
-                <div class="back-logo-edwardian">Patners</div>
+                <div class="back-logo-vivaldi">Mif Lawyer</div>
+                <div class="back-logo-edwardian">& Partners</div>
                 <div class="back-subtitle">IUS GENTIUM IUSTITIA</div>
+                <div class="back-line"></div>
                 <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
             </div>
             <div class="back-address">
