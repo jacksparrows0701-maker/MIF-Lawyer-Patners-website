@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const waFloat = document.getElementById('waFloat');
 
     if (waTooltip && waFloat) {
-        if (localStorage.getItem('waTooltipClosed') === 'true') {
+        if (localStorage.getItem('waTooltipDismissed') === 'true') {
             waTooltip.style.display = 'none';
         } else {
             // Icon WA pulse setelah 3 detik
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
             waTooltipClose.addEventListener('click', function(e) {
                 e.stopPropagation();
                 waTooltip.classList.add('disappear');
-                localStorage.setItem('waTooltipClosed', 'true');
+                localStorage.setItem('waTooltipDismissed', 'true');
                 setTimeout(function() {
                     waTooltip.classList.remove('show');
                     waTooltip.classList.remove('disappear');
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
             waTooltipText.style.cursor = 'pointer';
             waTooltipText.addEventListener('click', function() {
                 document.getElementById('waModal').classList.add('active');
-                localStorage.setItem('waTooltipClosed', 'true');
+                localStorage.setItem('waTooltipDismissed', 'true');
                 waTooltip.classList.add('disappear');
                 setTimeout(function() {
                     waTooltip.classList.remove('show');
