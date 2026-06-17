@@ -82,7 +82,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    gap: 2px;
 }
 .logo-vivaldi {
     font-family: 'Vivaldi', cursive;
