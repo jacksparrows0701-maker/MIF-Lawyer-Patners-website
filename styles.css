@@ -90,7 +90,7 @@ body {
     color: #fff;
 }
 .logo-edwardian {
-    font-family: 'Edwardian Script ITC', cursive;
+    font-family: 'Pinyon Script', cursive;
     font-size: 1.2rem;
     color: var(--accent);
 }
@@ -753,7 +753,7 @@ body {
     color: #fff;
 }
 .footer-logo .logo-edwardian {
-    font-family: 'Edwardian Script ITC', cursive;
+    font-family: 'Pinyon Script', cursive;
     font-size: 1.3rem;
     color: var(--accent);
 }
