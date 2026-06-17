@@ -195,7 +195,7 @@ body {
     pointer-events: none;
 }
 .hero-logo-img {
-    width: 500px; height: 500px;
+    width: 400px; height: 400px;
     object-fit: contain;
 }
 .hero-content {
@@ -205,7 +205,7 @@ body {
 }
 .hero-title {
     margin-bottom: 10px;
-    line-height: 1.2;
+    line-height: 1;
 }
 .hero-title .logo-vivaldi {
     font-size: 3.5rem;
@@ -214,6 +214,8 @@ body {
 .hero-title .logo-edwardian {
     font-size: 2.5rem;
     letter-spacing: -2px;
+    margin-top: -20px;
+    display: block;
 }
 .hero-subtitle-motto {
     font-family: 'Times New Roman', serif;
