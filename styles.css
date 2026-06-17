@@ -410,6 +410,15 @@ body {
 .service-icon {
     font-size: 2.2rem;
     margin-bottom: 15px;
+    color: var(--primary);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    background: rgba(26,77,46,0.08);
+    border-radius: 50%;
 }
 .service-card h3 {
     font-size: 1.1rem;
@@ -521,6 +530,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
+.swiper-pagination-bullet-active {
+    background: var(--accent) !important;
+}
+.swiper {
+    padding: 10px 0 40px;
+}
 .testimonial-card {
     background: var(--bg-white);
     padding: 30px;
@@ -537,6 +552,8 @@ body {
     color: var(--accent);
     margin-bottom: 12px;
     font-size: 0.9rem;
+    display: flex;
+    gap: 3px;
 }
 .testimonial-text {
     font-style: italic;
@@ -962,6 +979,7 @@ body {
     .hero-buttons { flex-direction: column; align-items: center; }
     .process-steps { grid-template-columns: 1fr; }
     .hero-stats { flex-direction: column; gap: 15px; }
+    .swiper-pagination { display: block; }
 }
 
 /* Article Page */

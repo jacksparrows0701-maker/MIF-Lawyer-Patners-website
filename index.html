@@ -77,6 +77,9 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -132,7 +135,7 @@
         </div>
     </header>
 
-    <section class="about section" id="about">
+    <section class="about section" id="about" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Tentang Kami</h2>
@@ -169,7 +172,7 @@
         </div>
     </section>
 
-    <section class="team section" id="team">
+    <section class="team section" id="team" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Tim Kami</h2>
@@ -206,45 +209,45 @@
         </div>
     </section>
 
-    <section class="services section" id="services">
+    <section class="services section" id="services" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Layanan Kami</h2>
                 <p class="section-subtitle">Solusi hukum untuk perkara Pengadilan Agama</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">&#9878;</div>
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
                     <h3>Perceraian</h3>
                     <p>Penanganan perceraian baik yang diajukan suami (Cerai Talak) maupun istri (Cerai Gugat) dengan proses yang cepat dan sesuai syariah.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#9879;</div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
                     <h3>Nafkah Iddah & Mut'ah</h3>
                     <p>Permohonan nafkah untuk istri yang dicerai, termasuk nafkah iddah dan mut'ah sesuai ketentuan hukum Islam.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#9881;</div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-child"></i></div>
                     <h3>Hak Asuh Anak</h3>
                     <p>Penyelesaian sengketa hak asuh anak (hadhanah) dengan mempertimbangkan kepentingan terbaik anak sesuai hukum Islam.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#9733;</div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3>Harta Bersama</h3>
                     <p>Pembagian harta bersama (gono-gini) setelah perceraian secara adil berdasarkan hukum Islam dan hukum perdata.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#9874;</div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Waris</h3>
                     <p>Penyelesaian sengketa warisan sesuai hukum Islam, termasuk pembagian waris menurut faraid dan wasiat.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#10070;</div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
                     <h3>Perwalian</h3>
                     <p>Permohonan perwalian anak di bawah umur yang kehilangan salah satu atau kedua orang tuanya.</p>
                     <a href="#contact" class="service-link">Konsultasi &rarr;</a>
@@ -253,7 +256,7 @@
         </div>
     </section>
 
-    <section class="process section" id="process">
+    <section class="process section" id="process" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Proses Kerja Kami</h2>
@@ -289,7 +292,7 @@
         </div>
     </section>
 
-    <section class="faq section" id="faq">
+    <section class="faq section" id="faq" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Pertanyaan Umum</h2>
@@ -345,84 +348,99 @@
         </div>
     </section>
 
-    <section class="testimonials section" id="testimonials">
+    <section class="testimonials section" id="testimonials" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Testimoni Klien</h2>
                 <p class="section-subtitle">Kepuasan klien adalah prioritas kami</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Alhamdulillah, proses cerai gugat saya berjalan lancar. Pak Ihsan sangat profesional dan komunikatif. Hasilnya sesuai yang diharapkan. Terima kasih Mif Lawyer!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">S</div>
-                        <div>
-                            <h4>Siti Nurhaliza</h4>
-                            <span>Cerai Gugat - Bandung</span>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Alhamdulillah, proses cerai gugat saya berjalan lancar. Pak Ihsan sangat profesional dan komunikatif. Hasilnya sesuai yang diharapkan. Terima kasih Mif Lawyer!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">S</div>
+                                <div>
+                                    <h4>Siti Nurhaliza</h4>
+                                    <span>Cerai Gugat - Bandung</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Sengketa harta bersama rumit, tapi tim Mif Lawyer berhasil menyelesaikan dengan adil. Sangat recommended untuk kasus pengadilan agama."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">A</div>
+                                <div>
+                                    <h4>Ahmad Fauzi</h4>
+                                    <span>Harta Bersama - Cimahi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Pak Rudi membantu saya memperoleh hak asuh anak. Dengan pendekatan yang bijaksana dan sesuai syariah. Anak saya kembali di sisi saya."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">R</div>
+                                <div>
+                                    <h4>Rina Wati</h4>
+                                    <span>Hak Asuh Anak - Bandung</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Konsultasi gratis dan respons sangat cepat. Biaya jelas sejak awal, tidak ada biaya tersembunyi. Saya puas dengan layanannya."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">D</div>
+                                <div>
+                                    <h4>Dedi Kurniawan</h4>
+                                    <span>Cerai Talak - Sumedang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Sengketa waris keluarga kami diselesaikan dengan damai berkat bantuan Mif Lawyer. Proses cepat dan sesuai hukum Islam."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">M</div>
+                                <div>
+                                    <h4>Muhammad Hatta</h4>
+                                    <span>Sengketa Waris - Garut</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Sebagai perempuan yang baru pertama kali ke pengadilan, saya merasa sangat dibantu dan dipandu dengan sabar. Terima kasih, Pak Ihsan!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">F</div>
+                                <div>
+                                    <h4>Fatimah Azzahra</h4>
+                                    <span>Nafkah Iddah - Bandung</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Sengketa harta bersama rumit, tapi tim Mif Lawyer berhasil menyelesaikan dengan adil. Sangat recommended untuk kasus pengadilan agama."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">A</div>
-                        <div>
-                            <h4>Ahmad Fauzi</h4>
-                            <span>Harta Bersama - Cimahi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Pak Rudi membantu saya memperoleh hak asuh anak. Dengan pendekatan yang bijaksana dan sesuai syariah. Anak saya kembali di sisi saya."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">R</div>
-                        <div>
-                            <h4>Rina Wati</h4>
-                            <span>Hak Asuh Anak - Bandung</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Konsultasi gratis dan respons sangat cepat. Biaya jelas sejak awal, tidak ada biaya tersembunyi. Saya puas dengan layanannya."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">D</div>
-                        <div>
-                            <h4>Dedi Kurniawan</h4>
-                            <span>Cerai Talak - Sumedang</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Sengketa waris keluarga kami diselesaikan dengan damai berkat bantuan Mif Lawyer. Proses cepat dan sesuai hukum Islam."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">M</div>
-                        <div>
-                            <h4>Muhammad Hatta</h4>
-                            <span>Sengketa Waris - Garut</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Sebagai perempuan yang baru pertama kali ke pengadilan, saya merasa sangat dibantu dan dipandu dengan sabar. Terima kasih, Pak Ihsan!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">F</div>
-                        <div>
-                            <h4>Fatimah Azzahra</h4>
-                            <span>Nafkah Iddah - Bandung</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <section class="blog section" id="blog">
+    <section class="blog section" id="blog" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Artikel Hukum</h2>
@@ -572,7 +590,7 @@
         </div>
     </section>
 
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Hubungi Kami</h2>
@@ -581,7 +599,7 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">&#9742;</div>
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
                             <h4>Telepon</h4>
                             <p>+62 857 5997 7665</p>
@@ -589,7 +607,7 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">&#9993;</div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
                             <p>ihsanfauzia@gmail.com</p>
@@ -597,14 +615,14 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">&#9962;</div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Alamat</h4>
                             <p>Jl. Waluya Panorama Hegarmanah, XRWQ+6P Hegarmanah<br>Kabupaten Bandung, Jawa Barat, 12345</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">&#8987;</div>
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
                             <h4>Jam Kerja</h4>
                             <p>Senin - Jumat: 08.00 - 17.00</p>
@@ -708,6 +726,32 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 25,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            }
+        });
+    </script>
 </body>
 </html>
