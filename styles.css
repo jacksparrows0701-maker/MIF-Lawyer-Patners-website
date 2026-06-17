@@ -755,48 +755,97 @@ body {
     gap: 15px;
 }
 
-/* WA Floating Banner */
-.wa-banner {
+/* WA Tooltip Speech Bubble */
+.wa-tooltip {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    background: #25D366;
-    color: #fff;
-    text-align: center;
-    padding: 8px 15px;
-    font-size: 0.8rem;
+    bottom: 95px;
+    right: 25px;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.wa-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.wa-tooltip.disappear {
+    animation: popOut 0.5s ease forwards;
+}
+.wa-tooltip-bubble {
+    background: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: var(--transition);
+    gap: 10px;
+    animation: popIn 0.5s ease forwards;
+    max-width: 200px;
 }
-.wa-banner.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
+.wa-tooltip.show .wa-tooltip-bubble {
+    animation: popIn 0.5s ease forwards, breathing 2s ease-in-out 0.5s infinite;
 }
-.wa-banner-text {
-    cursor: pointer;
+.wa-tooltip-text {
+    font-size: 0.8rem;
     font-weight: 500;
+    color: #333;
+    white-space: nowrap;
 }
-.wa-banner-text:hover {
-    text-decoration: underline;
-}
-.wa-banner-close {
+.wa-tooltip-close {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1.1rem;
+    color: #999;
+    font-size: 1rem;
     cursor: pointer;
-    opacity: 0.8;
-    padding: 0 5px;
+    padding: 0;
+    line-height: 1;
 }
-.wa-banner-close:hover {
-    opacity: 1;
+.wa-tooltip-close:hover {
+    color: #333;
+}
+.wa-tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+    margin: 0 auto;
+    position: relative;
+    right: -60px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+}
+
+/* Pulse icon WA */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+    50% { transform: scale(1.12); box-shadow: 0 6px 25px rgba(37,211,102,0.6); }
+}
+.wa-float.pulse {
+    animation: pulse 1s ease-in-out 3;
+}
+
+/* Bubble pop in */
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Breathing effect */
+@keyframes breathing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Bubble pop out */
+@keyframes popOut {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0) translateY(-30px); opacity: 0; }
 }
 
 /* Footer */

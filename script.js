@@ -232,16 +232,64 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // WA Floating Banner
-    const waBanner = document.getElementById('waBanner');
-    const waBannerClose = document.getElementById('waBannerClose');
-    if (waBanner && waBannerClose) {
-        if (localStorage.getItem('waBannerClosed') === 'true') {
-            waBanner.classList.add('hidden');
+    // WA Tooltip Speech Bubble
+    const waTooltip = document.getElementById('waTooltip');
+    const waTooltipClose = document.getElementById('waTooltipClose');
+    const waFloat = document.getElementById('waFloat');
+
+    if (waTooltip && waFloat) {
+        if (localStorage.getItem('waTooltipClosed') === 'true') {
+            waTooltip.style.display = 'none';
+        } else {
+            // Icon WA pulse setelah 3 detik
+            setTimeout(function() {
+                waFloat.classList.add('pulse');
+            }, 3000);
+
+            // Tooltip muncul setelah 5 detik
+            setTimeout(function() {
+                waTooltip.classList.add('show');
+            }, 5000);
+
+            // Tooltip hilang setelah 10 detik
+            setTimeout(function() {
+                if (waTooltip.classList.contains('show')) {
+                    waTooltip.classList.add('disappear');
+                    setTimeout(function() {
+                        waTooltip.classList.remove('show');
+                        waTooltip.classList.remove('disappear');
+                        waFloat.classList.remove('pulse');
+                    }, 500);
+                }
+            }, 10000);
         }
-        waBannerClose.addEventListener('click', function() {
-            waBanner.classList.add('hidden');
-            localStorage.setItem('waBannerClosed', 'true');
-        });
+
+        // Klik tooltip bubble → buka modal
+        if (waTooltipClose) {
+            waTooltipClose.addEventListener('click', function(e) {
+                e.stopPropagation();
+                waTooltip.classList.add('disappear');
+                localStorage.setItem('waTooltipClosed', 'true');
+                setTimeout(function() {
+                    waTooltip.classList.remove('show');
+                    waTooltip.classList.remove('disappear');
+                }, 500);
+            });
+        }
+
+        // Klik teks → buka modal
+        var waTooltipText = document.querySelector('.wa-tooltip-text');
+        if (waTooltipText) {
+            waTooltipText.style.cursor = 'pointer';
+            waTooltipText.addEventListener('click', function() {
+                document.getElementById('waModal').classList.add('active');
+                localStorage.setItem('waTooltipClosed', 'true');
+                waTooltip.classList.add('disappear');
+                setTimeout(function() {
+                    waTooltip.classList.remove('show');
+                    waTooltip.classList.remove('disappear');
+                }, 500);
+            });
+        }
     }
 });
