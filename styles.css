@@ -1072,6 +1072,17 @@ body {
     .team-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+    .wa-tooltip {
+        bottom: 80px;
+        right: 15px;
+    }
+    .wa-tooltip-bubble {
+        max-width: 170px;
+        padding: 8px 12px;
+    }
+    .wa-tooltip-text {
+        font-size: 0.7rem;
+    }
 }
 @media (max-width: 480px) {
     .hero-title .logo-vivaldi { font-size: 1.8rem; }

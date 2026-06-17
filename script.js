@@ -241,9 +241,10 @@ document.addEventListener('DOMContentLoaded', function() {
             waTooltip.style.display = 'none';
         } else {
             var showCount = 0;
-            var maxShow = 5;
+            var isMobile = window.innerWidth <= 768;
+            var maxShow = isMobile ? 2 : 5;
             var displayTime = 8000;
-            var gapTime = 10000;
+            var gapTime = isMobile ? 20000 : 10000;
 
             function showCycle() {
                 if (showCount >= maxShow) return;
