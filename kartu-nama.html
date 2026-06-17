@@ -35,6 +35,20 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
+        .card-logo-bg {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 120px;
+            height: 120px;
+            background-image: url('images/logo.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            pointer-events: none;
+        }
         .card::before {
             content: '';
             position: absolute;
@@ -159,6 +173,7 @@
     <div class="cards-container">
         <!-- Kartu Nama 1: M. Ihsan Fauzi -->
         <div class="card">
+            <div class="card-logo-bg"></div>
             <div class="accent-bar"></div>
             <div class="card-left">
                 <div class="logo-small">Mif Lawyer & Patners</div>
@@ -180,6 +195,7 @@
 
         <!-- Kartu Nama 2: Rudi Kurniawan -->
         <div class="card">
+            <div class="card-logo-bg"></div>
             <div class="accent-bar"></div>
             <div class="card-left">
                 <div class="logo-small">Mif Lawyer & Patners</div>
