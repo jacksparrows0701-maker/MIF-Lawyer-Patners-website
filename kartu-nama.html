@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Nama - Mif Lawyer & Patners</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Times+New+Roman&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #e0e0e0;
@@ -20,206 +15,80 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .cards-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+        .cards-container { display: flex; flex-direction: column; gap: 30px; }
 
-        /* DEPAN */
         .card {
-            width: 83mm;
-            height: 50mm;
+            width: 83mm; height: 50mm;
             background: #ffffff;
             border-radius: 8px;
-            padding: 12px 15px;
+            padding: 10px 15px;
             display: flex;
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 1px solid #e0e0e0;
         }
-        .card-logo-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 220px;
-            height: 220px;
-            background-image: url('images/logo.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.08;
-            pointer-events: none;
-        }
-        .card-left {
-            flex: 1;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        .card-left { flex: 1; position: relative; z-index: 1; }
         .card-right {
             width: 80px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            margin-left: 10px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            position: relative; z-index: 1;
         }
-        .logo-line-top {
-            font-family: 'Great Vibes', cursive;
-            font-size: 24px;
-            color: #1a365d;
-            line-height: 1;
-        }
-        .logo-line-bottom {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 22px;
-            color: #1a365d;
-            line-height: 1;
-            margin-top: -2px;
-        }
-        .logo-motto {
-            font-family: 'Times New Roman', serif;
-            font-size: 7px;
-            color: #c9a84c;
-            letter-spacing: 3px;
-            margin-top: 6px;
-            text-transform: uppercase;
+        .card-logo-img {
+            width: 60px;
+            height: auto;
+            display: block;
+            margin-bottom: 3px;
         }
         .gold-line {
-            width: 100%;
-            height: 3px;
+            width: 100%; height: 3px;
             background: linear-gradient(to bottom, #c9a84c 0%, #c9a84c 40%, transparent 40%, transparent 60%, #c9a84c 60%, #c9a84c 100%);
-            margin: 8px 0;
+            margin: 5px 0;
         }
         .card-name {
-            font-size: 13px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 2px;
+            font-size: 12px; font-weight: 700;
+            color: #1a365d; margin-bottom: 2px;
         }
         .card-title {
-            font-size: 7px;
-            color: #c9a84c;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
+            font-size: 7px; color: #c9a84c;
+            font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.5px; margin-bottom: 8px;
         }
-        .card-info {
-            font-size: 7px;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-        .card-info span {
-            color: #1a365d;
-            font-weight: 600;
-        }
-        .card-website {
-            font-size: 6px;
-            color: #c9a84c;
-            margin-top: 5px;
-            font-weight: 600;
-        }
+        .card-info { font-size: 7px; color: #4a5568; line-height: 1.8; }
+        .card-info span { color: #1a365d; font-weight: 600; }
+        .card-website { font-size: 6px; color: #c9a84c; margin-top: 5px; font-weight: 600; }
         .qr-code {
-            width: 68px;
-            height: 68px;
-            background: #ffffff;
-            border: 2px solid #e0e0e0;
+            width: 65px; height: 65px;
+            background: #ffffff; border: 1px solid #e0e0e0;
             border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4px;
+            display: flex; align-items: center; justify-content: center;
+            padding: 3px;
         }
-        .qr-code img,
-        .qr-code canvas {
-            width: 100% !important;
-            height: 100% !important;
-        }
-        .qr-label {
-            font-size: 6px;
-            color: #718096;
-            text-align: center;
-            margin-top: 4px;
-            line-height: 1.3;
-        }
+        .qr-code img, .qr-code canvas { width: 100% !important; height: 100% !important; }
+        .qr-label { font-size: 6px; color: #718096; text-align: center; margin-top: 3px; }
 
-        /* BELAKANG */
         .card-back {
-            width: 83mm;
-            height: 50mm;
+            width: 83mm; height: 50mm;
             background: #ffffff;
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 1px solid #e0e0e0;
         }
-        .card-back .card-logo-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            opacity: 0.06;
-        }
-        .back-content {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        .back-logo-vivaldi {
-            font-family: 'Great Vibes', cursive;
-            font-size: 42px;
-            color: #1a365d;
-            line-height: 1;
-        }
-        .back-logo-edwardian {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 38px;
-            color: #1a365d;
-            line-height: 1;
-            margin-top: -5px;
-        }
-        .back-motto {
-            font-family: 'Times New Roman', serif;
-            font-size: 10px;
-            color: #c9a84c;
-            letter-spacing: 4px;
-            margin-top: 12px;
-            text-transform: uppercase;
-        }
-        .back-gold-line {
-            width: 60%;
-            height: 3px;
-            background: linear-gradient(to bottom, #c9a84c 0%, #c9a84c 40%, transparent 40%, transparent 60%, #c9a84c 60%, #c9a84c 100%);
-            margin: 12px auto;
-        }
+        .back-content { text-align: center; position: relative; z-index: 1; }
+        .back-logo-img { width: 120px; height: auto; }
         .back-tagline {
-            font-size: 8px;
-            color: #718096;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 8px; color: #718096;
+            letter-spacing: 2px; text-transform: uppercase;
+            margin-top: 10px;
         }
         .back-address {
-            position: absolute;
-            bottom: 8px;
-            font-size: 6px;
-            color: #a0aec0;
-            text-align: center;
-            z-index: 1;
+            position: absolute; bottom: 8px;
+            font-size: 6px; color: #a0aec0;
+            text-align: center; z-index: 1;
         }
 
         @media print {
@@ -232,11 +101,8 @@
     <div class="cards-container">
         <!-- Depan 1 -->
         <div class="card">
-            <div class="card-logo-bg"></div>
             <div class="card-left">
-                <div class="logo-line-top">Mif Lawyer</div>
-                <div class="logo-line-bottom">& Partners</div>
-                <div class="logo-motto">IUS GENTIUM IUSTITIA</div>
+                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="card-logo-img">
                 <div class="gold-line"></div>
                 <div class="card-name">M. Ihsan Fauzi, S.H., M.H.</div>
                 <div class="card-title">Managing Partner</div>
@@ -255,11 +121,8 @@
 
         <!-- Depan 2 -->
         <div class="card">
-            <div class="card-logo-bg"></div>
             <div class="card-left">
-                <div class="logo-line-top">Mif Lawyer</div>
-                <div class="logo-line-bottom">& Partners</div>
-                <div class="logo-motto">IUS GENTIUM IUSTITIA</div>
+                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="card-logo-img">
                 <div class="gold-line"></div>
                 <div class="card-name">Rudi Kurniawan, S.H.</div>
                 <div class="card-title">Associate Lawyer</div>
@@ -278,12 +141,8 @@
 
         <!-- Belakang -->
         <div class="card-back">
-            <div class="card-logo-bg"></div>
             <div class="back-content">
-                <div class="back-logo-vivaldi">Mif Lawyer</div>
-                <div class="back-logo-edwardian">& Partners</div>
-                <div class="back-motto">IUS GENTIUM IUSTITIA</div>
-                <div class="back-gold-line"></div>
+                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="back-logo-img">
                 <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
             </div>
             <div class="back-address">
@@ -296,13 +155,11 @@
     <script>
         new QRCode(document.getElementById('qr1'), {
             text: 'https://wa.me/6285759977665',
-            width: 150,
-            height: 150
+            width: 150, height: 150
         });
         new QRCode(document.getElementById('qr2'), {
             text: 'https://wa.me/6281285313618',
-            width: 150,
-            height: 150
+            width: 150, height: 150
         });
     </script>
 </body>
