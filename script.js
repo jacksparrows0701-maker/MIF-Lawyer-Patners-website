@@ -231,4 +231,17 @@ document.addEventListener('DOMContentLoaded', function() {
             heroLogo.style.transform = 'translate(-50%, calc(-50% + ' + (scrolled * 0.3) + 'px))';
         }
     });
+
+    // WA Floating Banner
+    const waBanner = document.getElementById('waBanner');
+    const waBannerClose = document.getElementById('waBannerClose');
+    if (waBanner && waBannerClose) {
+        if (localStorage.getItem('waBannerClosed') === 'true') {
+            waBanner.classList.add('hidden');
+        }
+        waBannerClose.addEventListener('click', function() {
+            waBanner.classList.add('hidden');
+            localStorage.setItem('waBannerClosed', 'true');
+        });
+    }
 });

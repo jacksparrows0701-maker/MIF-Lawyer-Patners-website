@@ -755,6 +755,50 @@ body {
     gap: 15px;
 }
 
+/* WA Floating Banner */
+.wa-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: #25D366;
+    color: #fff;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+.wa-banner.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+.wa-banner-text {
+    cursor: pointer;
+    font-weight: 500;
+}
+.wa-banner-text:hover {
+    text-decoration: underline;
+}
+.wa-banner-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 0 5px;
+}
+.wa-banner-close:hover {
+    opacity: 1;
+}
+
 /* Footer */
 .footer {
     background: #0d0d0d;
