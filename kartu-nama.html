@@ -55,6 +55,22 @@
             page-break-after: always;
         }
 
+        .card-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card > *:not(.card-watermark) {
+            position: relative;
+            z-index: 1;
+        }
+
         .card-top {
             display: flex;
             justify-content: space-between;
@@ -69,8 +85,7 @@
 
         .card-logo img {
             height: 28px;
-            mix-blend-mode: screen;
-            filter: brightness(1.2);
+            opacity: 0.85;
         }
 
         .card-logo .logo-text {
@@ -185,8 +200,7 @@
 
         .card-back .back-logo img {
             height: 35px;
-            mix-blend-mode: screen;
-            filter: brightness(1.2);
+            opacity: 0.85;
             margin-bottom: 5px;
         }
 
@@ -244,6 +258,7 @@
     <!-- KARTU 1: M. Ihsan Fauzi - Front -->
     <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Front)</p>
     <div class="card">
+        <img src="images/logo.jpg" alt="" class="card-watermark">
         <div class="card-top">
             <div class="card-logo">
                 <img src="images/logo.jpg" alt="Mif Lawyer Logo">
@@ -276,6 +291,7 @@
     <!-- KARTU 2: M. Ihsan Fauzi - Back -->
     <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Back)</p>
     <div class="card card-back">
+        <img src="images/logo.jpg" alt="" class="card-watermark">
         <div class="back-logo">
             <img src="images/logo.jpg" alt="Mif Lawyer Logo">
             <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
@@ -288,6 +304,7 @@
     <!-- KARTU 3: Rudi Kurniawan - Front -->
     <p class="card-label">Kartu 2 — Rudi Kurniawan (Front)</p>
     <div class="card">
+        <img src="images/logo.jpg" alt="" class="card-watermark">
         <div class="card-top">
             <div class="card-logo">
                 <img src="images/logo.jpg" alt="Mif Lawyer Logo">
@@ -320,6 +337,7 @@
     <!-- KARTU 4: Rudi Kurniawan - Back -->
     <p class="card-label">Kartu 2 — Rudi Kurniawan (Back)</p>
     <div class="card card-back">
+        <img src="images/logo.jpg" alt="" class="card-watermark">
         <div class="back-logo">
             <img src="images/logo.jpg" alt="Mif Lawyer Logo">
             <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
