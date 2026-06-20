@@ -1,174 +1,333 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4XQG0DGES"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-B4XQG0DGES');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Nama - Mif Lawyer & Partners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+        @font-face {
+            font-family: 'Vivaldi';
+            src: url('fonts/Vivaldi-Regular.ttf') format('truetype');
         }
-        .cards-container { display: flex; flex-direction: column; gap: 30px; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: -30px;
+        }
 
         .card {
-            width: 83mm; height: 50mm;
-            background: #ffffff;
+            width: 90mm;
+            height: 55mm;
+            background: #0d0d0d;
             border-radius: 8px;
-            padding: 10px 15px;
-            display: flex;
+            padding: 6mm 7mm;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            page-break-after: always;
         }
-        .card-left { flex: 1; position: relative; z-index: 1; }
-        .card-right {
-            width: 80px;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            position: relative; z-index: 1;
-        }
-        .card-logo-img {
-            width: 60px;
-            height: auto;
-            display: block;
-            margin-bottom: 3px;
-        }
-        .gold-line {
-            width: 100%; height: 3px;
-            background: linear-gradient(to bottom, #c9a84c 0%, #c9a84c 40%, transparent 40%, transparent 60%, #c9a84c 60%, #c9a84c 100%);
-            margin: 5px 0;
-        }
-        .card-name {
-            font-size: 12px; font-weight: 700;
-            color: #1a365d; margin-bottom: 2px;
-        }
-        .card-title {
-            font-size: 7px; color: #c9a84c;
-            font-weight: 600; text-transform: uppercase;
-            letter-spacing: 0.5px; margin-bottom: 8px;
-        }
-        .card-info { font-size: 7px; color: #4a5568; line-height: 1.8; }
-        .card-info span { color: #1a365d; font-weight: 600; }
-        .card-website { font-size: 6px; color: #c9a84c; margin-top: 5px; font-weight: 600; }
-        .qr-code {
-            width: 65px; height: 65px;
-            background: #ffffff; border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            display: flex; align-items: center; justify-content: center;
-            padding: 3px;
-        }
-        .qr-code img, .qr-code canvas { width: 100% !important; height: 100% !important; }
-        .qr-label { font-size: 6px; color: #718096; text-align: center; margin-top: 3px; }
 
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card-logo img {
+            height: 28px;
+            mix-blend-mode: screen;
+            filter: brightness(1.2);
+        }
+
+        .card-logo .logo-text {
+            font-family: 'Vivaldi', cursive;
+            font-size: 11pt;
+            color: #e8c547;
+            line-height: 1;
+        }
+
+        .card-logo .logo-text .ampersand {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 13pt;
+        }
+
+        .card-motto {
+            font-size: 5pt;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 3px;
+            text-align: right;
+            line-height: 1.2;
+        }
+
+        .card-motto strong {
+            color: #e8c547;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .card-name {
+            font-size: 11pt;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: 7pt;
+            color: #e8c547;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .card-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, #e8c547, transparent);
+            margin: 3px 0;
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .card-detail {
+            font-size: 6.5pt;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .card-detail i {
+            color: #e8c547;
+            width: 12px;
+            font-size: 6pt;
+        }
+
+        .card-specialty {
+            font-size: 6pt;
+            color: #e8c547;
+            font-style: italic;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .card-website {
+            font-size: 6pt;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .card-qr {
+            text-align: center;
+        }
+
+        .card-qr img {
+            width: 22px;
+            height: 22px;
+            mix-blend-mode: screen;
+            filter: brightness(1.3);
+        }
+
+        .card-qr span {
+            font-size: 4.5pt;
+            color: rgba(255,255,255,0.5);
+            display: block;
+            margin-top: 1px;
+        }
+
+        /* Back Card */
         .card-back {
-            width: 83mm; height: 50mm;
-            background: #ffffff;
-            border-radius: 8px;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid #e0e0e0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
-        .back-content { text-align: center; position: relative; z-index: 1; }
-        .back-logo-img { width: 120px; height: auto; }
-        .back-tagline {
-            font-size: 8px; color: #718096;
-            letter-spacing: 2px; text-transform: uppercase;
-            margin-top: 10px;
+
+        .card-back .back-logo img {
+            height: 35px;
+            mix-blend-mode: screen;
+            filter: brightness(1.2);
+            margin-bottom: 5px;
         }
-        .back-address {
-            position: absolute; bottom: 8px;
-            font-size: 6px; color: #a0aec0;
-            text-align: center; z-index: 1;
+
+        .card-back .back-logo .logo-text {
+            font-family: 'Vivaldi', cursive;
+            font-size: 14pt;
+            color: #e8c547;
+            line-height: 1;
+        }
+
+        .card-back .back-logo .logo-text .ampersand {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 16pt;
+        }
+
+        .card-back .back-tagline {
+            font-size: 6.5pt;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 8px 0;
+        }
+
+        .card-back .back-address {
+            font-size: 6pt;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .card-back .back-divider {
+            width: 60px;
+            height: 1px;
+            background: #e8c547;
+            margin: 6px auto;
         }
 
         @media print {
-            body { background: white; padding: 0; }
-            .card, .card-back { box-shadow: none; margin: 10px; border: 1px solid #ccc; }
+            body {
+                background: none;
+                padding: 0;
+            }
+            .card {
+                box-shadow: none;
+                margin: 0;
+            }
+            h1, .card-label {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="cards-container">
-        <!-- Depan 1 -->
-        <div class="card">
-            <div class="card-left">
-                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="card-logo-img">
-                <div class="gold-line"></div>
-                <div class="card-name">M. Ihsan Fauzi, S.H., M.H.</div>
-                <div class="card-title">Managing Partner</div>
-                <div class="card-info">
-                    <span>Telp:</span> +62 857 5997 7665<br>
-                    <span>Email:</span> ihsanfauzia@gmail.com<br>
-                    <span>Spesialis:</span> Pengadilan Agama
-                </div>
-                <div class="card-website">miflawandpatners.my.id</div>
+
+    <h1 style="text-align:center;">Kartu Nama - Mif Lawyer & Partners</h1>
+
+    <!-- KARTU 1: M. Ihsan Fauzi - Front -->
+    <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Front)</p>
+    <div class="card">
+        <div class="card-top">
+            <div class="card-logo">
+                <img src="images/logo.jpg" alt="Mif Lawyer Logo">
             </div>
-            <div class="card-right">
-                <div class="qr-code" id="qr1"></div>
-                <div class="qr-label">Scan untuk<br>WhatsApp</div>
+            <div class="card-motto">
+                <strong>IUS GENTIUM IUSTITIA</strong>
             </div>
         </div>
-
-        <!-- Depan 2 -->
-        <div class="card">
-            <div class="card-left">
-                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="card-logo-img">
-                <div class="gold-line"></div>
-                <div class="card-name">Rudi Kurniawan, S.H.</div>
-                <div class="card-title">Associate Lawyer</div>
-                <div class="card-info">
-                    <span>Telp:</span> +62 812 8531 3618<br>
-                    <span>Email:</span> rudikurniawan264@gmail.com<br>
-                    <span>Spesialis:</span> Pengadilan Agama
-                </div>
-                <div class="card-website">miflawandpatners.my.id</div>
-            </div>
-            <div class="card-right">
-                <div class="qr-code" id="qr2"></div>
-                <div class="qr-label">Scan untuk<br>WhatsApp</div>
+        <div class="card-body">
+            <div class="card-name">M. IHSAN FAUZI, S.H., M.H</div>
+            <div class="card-title">Managing Partner</div>
+            <div class="card-divider"></div>
+            <div class="card-details">
+                <div class="card-detail"><i class="fas fa-phone"></i> +62 857 5997 7665</div>
+                <div class="card-detail"><i class="fas fa-envelope"></i> ihsanfauzia@gmail.com</div>
+                <div class="card-specialty">Spesialis: Pengadilan Agama</div>
             </div>
         </div>
-
-        <!-- Belakang -->
-        <div class="card-back">
-            <div class="back-content">
-                <img src="images/logo.jpg" alt="Mif Lawyer & Partners" class="back-logo-img">
-                <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
-            </div>
-            <div class="back-address">
-                Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat
+        <div class="card-footer">
+            <div class="card-website">miflawandpatners.my.id</div>
+            <div class="card-qr">
+                <div style="width:22px;height:22px;background:rgba(255,255,255,0.1);border-radius:3px;display:flex;align-items:center;justify-content:center;">
+                    <i class="fab fa-whatsapp" style="color:#e8c547;font-size:14px;"></i>
+                </div>
+                <span>Scan untuk WhatsApp</span>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-    <script>
-        new QRCode(document.getElementById('qr1'), {
-            text: 'https://wa.me/6285759977665',
-            width: 150, height: 150
-        });
-        new QRCode(document.getElementById('qr2'), {
-            text: 'https://wa.me/6281285313618',
-            width: 150, height: 150
-        });
-    </script>
+    <!-- KARTU 2: M. Ihsan Fauzi - Back -->
+    <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Back)</p>
+    <div class="card card-back">
+        <div class="back-logo">
+            <img src="images/logo.jpg" alt="Mif Lawyer Logo">
+            <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
+        </div>
+        <div class="back-divider"></div>
+        <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
+        <div class="back-address">Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat</div>
+    </div>
+
+    <!-- KARTU 3: Rudi Kurniawan - Front -->
+    <p class="card-label">Kartu 2 — Rudi Kurniawan (Front)</p>
+    <div class="card">
+        <div class="card-top">
+            <div class="card-logo">
+                <img src="images/logo.jpg" alt="Mif Lawyer Logo">
+            </div>
+            <div class="card-motto">
+                <strong>IUS GENTIUM IUSTITIA</strong>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-name">RUDI KURNIAWAN, S.H.</div>
+            <div class="card-title">Associate Lawyer</div>
+            <div class="card-divider"></div>
+            <div class="card-details">
+                <div class="card-detail"><i class="fas fa-phone"></i> +62 812 8531 3618</div>
+                <div class="card-detail"><i class="fas fa-envelope"></i> rudikurniawan264@gmail.com</div>
+                <div class="card-specialty">Spesialis: Pengadilan Agama</div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="card-website">miflawandpatners.my.id</div>
+            <div class="card-qr">
+                <div style="width:22px;height:22px;background:rgba(255,255,255,0.1);border-radius:3px;display:flex;align-items:center;justify-content:center;">
+                    <i class="fab fa-whatsapp" style="color:#e8c547;font-size:14px;"></i>
+                </div>
+                <span>Scan untuk WhatsApp</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- KARTU 4: Rudi Kurniawan - Back -->
+    <p class="card-label">Kartu 2 — Rudi Kurniawan (Back)</p>
+    <div class="card card-back">
+        <div class="back-logo">
+            <img src="images/logo.jpg" alt="Mif Lawyer Logo">
+            <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
+        </div>
+        <div class="back-divider"></div>
+        <div class="back-tagline">Pengacara Spesialis Pengadilan Agama</div>
+        <div class="back-address">Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat</div>
+    </div>
+
 </body>
 </html>
