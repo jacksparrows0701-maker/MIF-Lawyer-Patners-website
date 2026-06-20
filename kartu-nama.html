@@ -75,7 +75,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 6mm;
+            margin-bottom: 4mm;
         }
 
         .card-logo {
@@ -96,16 +96,30 @@
             font-size: 13pt;
         }
 
-        .card-motto {
-            font-size: 5pt;
-            color: rgba(255,255,255,0.5);
-            letter-spacing: 3px;
-            text-align: right;
-            line-height: 1.2;
+        .card-top-qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
         }
 
-        .card-motto strong {
+        .card-top-qr img {
+            width: 15mm;
+            height: 15mm;
+            border-radius: 2px;
+        }
+
+        .card-top-qr span {
+            font-size: 4pt;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .card-motto {
+            font-size: 5pt;
             color: #e8c547;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            margin-top: 2px;
         }
 
         .card-body {
@@ -119,6 +133,8 @@
             color: #ffffff;
             font-weight: bold;
             letter-spacing: 1px;
+            padding-bottom: 2px;
+            border-bottom: 1.5px solid #e8c547;
         }
 
         .card-title {
@@ -130,8 +146,8 @@
 
         .card-divider {
             width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, #e8c547, transparent);
+            height: 2px;
+            background: #e8c547;
             margin: 3px 0;
         }
 
@@ -144,48 +160,6 @@
         .card-detail {
             font-size: 6.5pt;
             color: rgba(255,255,255,0.8);
-        }
-
-        .card-detail i {
-            color: #e8c547;
-            width: 12px;
-            font-size: 6pt;
-        }
-
-        .card-specialty {
-            font-size: 6pt;
-            color: #e8c547;
-            font-style: italic;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .card-website {
-            font-size: 6pt;
-            color: rgba(255,255,255,0.6);
-        }
-
-        .card-qr {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .card-qr img {
-            width: 18mm;
-            height: 18mm;
-            border-radius: 3px;
-        }
-
-        .card-qr span {
-            font-size: 4.5pt;
-            color: rgba(255,255,255,0.5);
-            display: block;
-            margin-top: 1px;
         }
 
         /* Back Card */
@@ -253,9 +227,11 @@
         <div class="card-top">
             <div class="card-logo">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
+                <div class="card-motto">IUS GENTIUM IUSTITIA</div>
             </div>
-            <div class="card-motto">
-                <strong>IUS GENTIUM IUSTITIA</strong>
+            <div class="card-top-qr">
+                <img src="images/qr-ihsan.png" alt="WhatsApp QR Ihsan">
+                <span>Scan untuk WhatsApp</span>
             </div>
         </div>
         <div class="card-body">
@@ -263,16 +239,9 @@
             <div class="card-title">Managing Partner</div>
             <div class="card-divider"></div>
             <div class="card-details">
-                <div class="card-detail"><i class="fas fa-phone"></i> +62 857 5997 7665</div>
-                <div class="card-detail"><i class="fas fa-envelope"></i> ihsanfauzia@gmail.com</div>
-                <div class="card-detail"><i class="fas fa-globe"></i> miflawandpatners.my.id</div>
-            </div>
-        </div>
-        <div class="card-footer">
-            <div class="card-website"></div>
-            <div class="card-qr">
-                <img src="images/qr-ihsan.png" alt="WhatsApp QR Ihsan">
-                <span>Scan untuk WhatsApp</span>
+                <div class="card-detail">Telp: +62 857 5997 7665</div>
+                <div class="card-detail">Email: ihsanfauzia@gmail.com</div>
+                <div class="card-detail">miflawandpatners.my.id</div>
             </div>
         </div>
     </div>
@@ -296,9 +265,11 @@
         <div class="card-top">
             <div class="card-logo">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
+                <div class="card-motto">IUS GENTIUM IUSTITIA</div>
             </div>
-            <div class="card-motto">
-                <strong>IUS GENTIUM IUSTITIA</strong>
+            <div class="card-top-qr">
+                <img src="images/qr-rudi.png" alt="WhatsApp QR Rudi">
+                <span>Scan untuk WhatsApp</span>
             </div>
         </div>
         <div class="card-body">
@@ -306,16 +277,9 @@
             <div class="card-title">Associate Lawyer</div>
             <div class="card-divider"></div>
             <div class="card-details">
-                <div class="card-detail"><i class="fas fa-phone"></i> +62 812 8531 3618</div>
-                <div class="card-detail"><i class="fas fa-envelope"></i> rudikurniawan264@gmail.com</div>
-                <div class="card-detail"><i class="fas fa-globe"></i> miflawandpatners.my.id</div>
-            </div>
-        </div>
-        <div class="card-footer">
-            <div class="card-website"></div>
-            <div class="card-qr">
-                <img src="images/qr-rudi.png" alt="WhatsApp QR Rudi">
-                <span>Scan untuk WhatsApp</span>
+                <div class="card-detail">Telp: +62 812 8531 3618</div>
+                <div class="card-detail">Email: rudikurniawan264@gmail.com</div>
+                <div class="card-detail">miflawandpatners.my.id</div>
             </div>
         </div>
     </div>
