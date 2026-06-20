@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /qr-cetak.html
+
+Sitemap: https://miflawandpatners.my.id/sitemap.xml

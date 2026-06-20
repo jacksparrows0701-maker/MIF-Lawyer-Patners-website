@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://miflawpatners.netlify.app/</loc>
-        <lastmod>2026-06-17</lastmod>
+        <loc>https://miflawandpatners.my.id/</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/5-hal-sebelum-cerai.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-asuh-anak-islam.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/harta-bersama.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/nafkah-iddah.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/isbat-nikah.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/waris-islam.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/mutah.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-waris-anak-luar-nikah.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/mediasi-pengadilan-agama.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/banding-pengadilan-agama.html</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/kartu-nama.html</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>
