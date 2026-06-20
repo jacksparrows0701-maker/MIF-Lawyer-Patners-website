@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Nama - Mif Lawyer & Partners</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Times+New+Roman&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Vivaldi';
@@ -50,8 +49,6 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            gap: 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             page-break-after: always;
         }
@@ -72,27 +69,29 @@
             z-index: 1;
         }
 
-        .card-top {
-            display: flex;
+        .card-front {
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1mm;
         }
 
-        .card-logo {
+        .card-header {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: flex-start;
         }
 
-        .card-logo .logo-text {
+        .card-header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text {
             font-family: 'Vivaldi', cursive;
             font-size: 11pt;
             color: #e8c547;
             line-height: 1;
         }
 
-        .card-logo .logo-text .ampersand {
+        .logo-text .ampersand {
             font-family: 'Pinyon Script', cursive;
             font-size: 13pt;
         }
@@ -101,32 +100,23 @@
             font-size: 5pt;
             color: #e8c547;
             letter-spacing: 3px;
-            line-height: 1.2;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
-        .card-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: 0;
-        }
-
-        .card-top-qr {
+        .card-qr {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
-            flex-shrink: 0;
+            gap: 1px;
         }
 
-        .card-top-qr img {
+        .card-qr img {
             width: 15mm;
             height: 15mm;
             border-radius: 2px;
         }
 
-        .card-top-qr span {
+        .card-qr span {
             font-size: 4pt;
             color: rgba(255,255,255,0.6);
         }
@@ -138,7 +128,7 @@
         }
 
         .card-name {
-            font-size: 9pt;
+            font-size: 10pt;
             color: #ffffff;
             font-weight: bold;
             letter-spacing: 1px;
@@ -149,7 +139,7 @@
         }
 
         .card-title {
-            font-size: 6pt;
+            font-size: 6.5pt;
             color: #e8c547;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -159,7 +149,7 @@
             width: fit-content;
             height: 2px;
             background: #e8c547;
-            margin: 2px 0;
+            margin: 3px 0;
         }
 
         .card-details {
@@ -169,8 +159,12 @@
         }
 
         .card-detail {
-            font-size: 5.5pt;
+            font-size: 6pt;
             color: rgba(255,255,255,0.8);
+        }
+
+        .card-detail span.label {
+            color: rgba(255,255,255,0.5);
         }
 
         /* Back Card */
@@ -180,19 +174,21 @@
             text-align: center;
         }
 
-        .card-back .back-logo .logo-text {
-            font-family: 'Vivaldi', cursive;
-            font-size: 14pt;
-            color: #e8c547;
-            line-height: 1;
+        .back-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .card-back .back-logo .logo-text .ampersand {
-            font-family: 'Pinyon Script', cursive;
+        .back-logo .logo-text {
+            font-size: 14pt;
+        }
+
+        .back-logo .logo-text .ampersand {
             font-size: 16pt;
         }
 
-        .card-back .back-tagline {
+        .back-tagline {
             font-size: 6.5pt;
             color: rgba(255,255,255,0.7);
             letter-spacing: 4px;
@@ -200,12 +196,12 @@
             margin: 8px 0;
         }
 
-        .card-back .back-address {
+        .back-address {
             font-size: 6pt;
             color: rgba(255,255,255,0.5);
         }
 
-        .card-back .back-divider {
+        .back-divider {
             width: 60px;
             height: 1px;
             background: #e8c547;
@@ -233,28 +229,27 @@
 
     <!-- KARTU 1: M. Ihsan Fauzi - Front -->
     <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Front)</p>
-    <div class="card">
+    <div class="card card-front">
         <img src="images/logo.jpg" alt="" class="card-watermark">
-        <div class="card-top">
-            <div class="card-logo">
+        <div class="card-header">
+            <div class="card-header-left">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
                 <div class="card-motto">IUS GENTIUM IUSTITIA</div>
             </div>
-        </div>
-        <div class="card-content">
-            <div class="card-body">
-                <div class="card-name">M. IHSAN FAUZI, S.H., M.H</div>
-                <div class="card-title">Managing Partner</div>
-                <div class="card-divider"></div>
-                <div class="card-details">
-                    <div class="card-detail">Telp: +62 857 5997 7665</div>
-                    <div class="card-detail">Email: ihsanfauzia@gmail.com</div>
-                    <div class="card-detail">miflawandpatners.my.id</div>
-                </div>
-            </div>
-            <div class="card-top-qr">
-                <img src="images/qr-ihsan.png" alt="WhatsApp QR Ihsan">
+            <div class="card-qr">
+                <img src="images/qr-ihsan.png" alt="WhatsApp QR">
                 <span>Scan untuk WhatsApp</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-name">M. IHSAN FAUZI, S.H., M.H</div>
+            <div class="card-title">Managing Partner</div>
+            <div class="card-divider"></div>
+            <div class="card-details">
+                <div class="card-detail"><span class="label">Telp:</span> +62 857 5997 7665</div>
+                <div class="card-detail"><span class="label">Email:</span> ihsanfauzia@gmail.com</div>
+                <div class="card-detail"><span class="label">Spesialis:</span> Pengadilan Agama</div>
+                <div class="card-detail">miflawandpatners.my.id</div>
             </div>
         </div>
     </div>
@@ -268,33 +263,33 @@
         </div>
         <div class="back-divider"></div>
         <div class="back-tagline">I U S  G E N T I U M  I U S T I T I A</div>
+        <div class="back-tagline" style="margin-top: 0; letter-spacing: 2px;">PENGACARA SPESIALIS PENGADILAN AGAMA</div>
         <div class="back-address">Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat</div>
     </div>
 
     <!-- KARTU 3: Rudi Kurniawan - Front -->
     <p class="card-label">Kartu 2 — Rudi Kurniawan (Front)</p>
-    <div class="card">
+    <div class="card card-front">
         <img src="images/logo.jpg" alt="" class="card-watermark">
-        <div class="card-top">
-            <div class="card-logo">
+        <div class="card-header">
+            <div class="card-header-left">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
                 <div class="card-motto">IUS GENTIUM IUSTITIA</div>
             </div>
-        </div>
-        <div class="card-content">
-            <div class="card-body">
-                <div class="card-name">RUDI KURNIAWAN, S.H.</div>
-                <div class="card-title">Associate Lawyer</div>
-                <div class="card-divider"></div>
-                <div class="card-details">
-                    <div class="card-detail">Telp: +62 812 8531 3618</div>
-                    <div class="card-detail">Email: rudikurniawan264@gmail.com</div>
-                    <div class="card-detail">miflawandpatners.my.id</div>
-                </div>
-            </div>
-            <div class="card-top-qr">
-                <img src="images/qr-rudi.png" alt="WhatsApp QR Rudi">
+            <div class="card-qr">
+                <img src="images/qr-rudi.png" alt="WhatsApp QR">
                 <span>Scan untuk WhatsApp</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-name">RUDI KURNIAWAN, S.H.</div>
+            <div class="card-title">Associate Lawyer</div>
+            <div class="card-divider"></div>
+            <div class="card-details">
+                <div class="card-detail"><span class="label">Telp:</span> +62 812 8531 3618</div>
+                <div class="card-detail"><span class="label">Email:</span> rudikurniawan264@gmail.com</div>
+                <div class="card-detail"><span class="label">Spesialis:</span> Pengadilan Agama</div>
+                <div class="card-detail">miflawandpatners.my.id</div>
             </div>
         </div>
     </div>
@@ -308,6 +303,7 @@
         </div>
         <div class="back-divider"></div>
         <div class="back-tagline">I U S  G E N T I U M  I U S T I T I A</div>
+        <div class="back-tagline" style="margin-top: 0; letter-spacing: 2px;">PENGACARA SPESIALIS PENGADILAN AGAMA</div>
         <div class="back-address">Jl. Waluya Panorama Hegarmanah, Kabupaten Bandung, Jawa Barat</div>
     </div>
 
