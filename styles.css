@@ -685,6 +685,25 @@ body {
     max-width: 900px;
     margin: 0 auto;
 }
+.maps-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.maps-info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+.maps-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
 
 /* Contact */
 .contact-wrapper {
