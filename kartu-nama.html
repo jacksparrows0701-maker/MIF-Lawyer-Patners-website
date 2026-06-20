@@ -104,10 +104,15 @@
         }
 
         .card-qr {
+            position: absolute;
+            right: 7mm;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1px;
+            z-index: 2;
         }
 
         .card-qr img {
@@ -231,14 +236,14 @@
     <p class="card-label">Kartu 1 — M. Ihsan Fauzi (Front)</p>
     <div class="card card-front">
         <img src="images/logo.jpg" alt="" class="card-watermark">
+        <div class="card-qr">
+            <img src="images/qr-ihsan.png" alt="WhatsApp QR">
+            <span>Scan untuk WhatsApp</span>
+        </div>
         <div class="card-header">
             <div class="card-header-left">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
                 <div class="card-motto">IUS GENTIUM IUSTITIA</div>
-            </div>
-            <div class="card-qr">
-                <img src="images/qr-ihsan.png" alt="WhatsApp QR">
-                <span>Scan untuk WhatsApp</span>
             </div>
         </div>
         <div class="card-body">
@@ -271,14 +276,14 @@
     <p class="card-label">Kartu 2 — Rudi Kurniawan (Front)</p>
     <div class="card card-front">
         <img src="images/logo.jpg" alt="" class="card-watermark">
+        <div class="card-qr">
+            <img src="images/qr-rudi.png" alt="WhatsApp QR">
+            <span>Scan untuk WhatsApp</span>
+        </div>
         <div class="card-header">
             <div class="card-header-left">
                 <div class="logo-text">Mif Lawyer <span class="ampersand">&</span> Partners</div>
                 <div class="card-motto">IUS GENTIUM IUSTITIA</div>
-            </div>
-            <div class="card-qr">
-                <img src="images/qr-rudi.png" alt="WhatsApp QR">
-                <span>Scan untuk WhatsApp</span>
             </div>
         </div>
         <div class="card-body">
