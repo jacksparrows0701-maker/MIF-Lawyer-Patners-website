@@ -1,0 +1,6 @@
+# Google service account key (RAHASIA - jangan di-commit!)
+gsc-service-account.json
+
+# Python
+__pycache__/
+*.pyc
