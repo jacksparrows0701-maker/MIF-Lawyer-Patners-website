@@ -414,6 +414,79 @@
         .wa-fixed:hover {
             transform: scale(1.1);
         }
+        .wa-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .wa-modal-overlay.active {
+            display: flex;
+        }
+        .wa-modal-box {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+            border: 1px solid rgba(232,197,71,0.3);
+        }
+        .wa-modal-box h3 {
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .wa-modal-box p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .wa-modal-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #fff;
+        }
+        .wa-modal-btn.wa-ihsan {
+            background: #25d366;
+        }
+        .wa-modal-btn.wa-ihsan:hover {
+            background: #1da851;
+        }
+        .wa-modal-btn.wa-rudi {
+            background: #128c7e;
+        }
+        .wa-modal-btn.wa-rudi:hover {
+            background: #0e7569;
+        }
+        .wa-modal-cancel {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: transparent;
+            color: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        .wa-modal-cancel:hover {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+        }
         @media (max-width: 768px) {
             .landing-hero h1 { font-size: 1.8rem; }
             .keunggulan-grid { grid-template-columns: repeat(2, 1fr); }
@@ -453,7 +526,7 @@
             <p class="subtitle">Spesialis Pengadilan Agama - Cerai Talak, Cerai Gugat, Nafkah, Hak Asuh Anak</p>
             <p class="subtitle2">Dipimpin oleh Advokat Berpengalaman dengan 300+ Perkara Ditangani</p>
             <div class="hero-cta">
-                <a href="https://wa.me/6281545454594?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian" class="btn-whatsapp">
+                <a href="javascript:void(0)" onclick="showWaModal('Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian')" class="btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> Konsultasi Gratis via WhatsApp
                 </a>
                 <a href="#layanan" class="btn-outline-gold">
@@ -562,7 +635,7 @@
                 <h3>Perceraian di Pengadilan Agama</h3>
                 <div class="price">Mulai Rp 5.000.000</div>
                 <p>*Biaya dapat berbeda tergantung kompleksitas kasus, apakah ada sengketa harta bersama atau hak asuh anak</p>
-                <a href="https://wa.me/6281545454594?text=Halo,%20saya%20ingin%20bertanya%20tentang%20biaya%20perceraian" class="btn-whatsapp">
+                <a href="javascript:void(0)" onclick="showWaModal('Halo,%20saya%20ingin%20bertanya%20tentang%20biaya%20perceraian')" class="btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> Tanya Biaya via WhatsApp
                 </a>
             </div>
@@ -659,7 +732,7 @@
         <div class="container">
             <h2>Butuh Pengacara Perceraian Bandung?</h2>
             <p>Jangan tunda lagi! Konsultasikan permasalahan Anda dengan kami. Konsultasi pertama GRATIS!</p>
-            <a href="https://wa.me/6281545454594?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian" class="btn-whatsapp" style="font-size: 1.3rem; padding: 16px 40px;">
+            <a href="javascript:void(0)" onclick="showWaModal('Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian')" class="btn-whatsapp" style="font-size: 1.3rem; padding: 16px 40px;">
                 <i class="fab fa-whatsapp"></i> Hubungi Kami Sekarang
             </a>
             <p style="margin-top: 15px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
@@ -679,9 +752,23 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/6281545454594?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian" class="wa-fixed">
+    <a href="javascript:void(0)" onclick="showWaModal('Halo,%20saya%20ingin%20konsultasi%20tentang%20perceraian')" class="wa-fixed">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <div class="wa-modal-overlay" id="waModal">
+        <div class="wa-modal-box">
+            <h3>Pilih Pengacara</h3>
+            <p>Siapa yang ingin Anda hubungi?</p>
+            <a href="#" id="waIhsan" class="wa-modal-btn wa-ihsan">
+                <i class="fab fa-whatsapp"></i> M. Ihsan Fauzi, S.H., M.H.
+            </a>
+            <a href="#" id="waRudi" class="wa-modal-btn wa-rudi">
+                <i class="fab fa-whatsapp"></i> Rudi Kurniawan, S.H.
+            </a>
+            <button class="wa-modal-cancel" onclick="closeWaModal()">Batal</button>
+        </div>
+    </div>
 
     <script>
         function toggleFaq(el) {
@@ -695,6 +782,20 @@
                 toggle.textContent = '-';
             }
         }
+
+        function showWaModal(msg) {
+            document.getElementById('waModal').classList.add('active');
+            document.getElementById('waIhsan').href = 'https://wa.me/6281545454594?text=' + msg;
+            document.getElementById('waRudi').href = 'https://wa.me/6285119973606?text=' + msg;
+        }
+
+        function closeWaModal() {
+            document.getElementById('waModal').classList.remove('active');
+        }
+
+        document.getElementById('waModal').addEventListener('click', function(e) {
+            if (e.target === this) closeWaModal();
+        });
     </script>
 </body>
 </html>
