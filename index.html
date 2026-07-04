@@ -1207,61 +1207,63 @@
             }, 500);
         });
 
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
 
-        new Swiper('.testimonials-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 25,
-            pagination: {
-                el: '.testimonials-pagination',
-                clickable: true
-            },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            },
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false
-            }
-        });
+            new Swiper('.testimonials-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 25,
+                pagination: {
+                    el: '.testimonials-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false
+                }
+            });
 
-        new Swiper('.blog-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 25,
-            pagination: {
-                el: '.blog-pagination',
-                clickable: true
-            },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false
-            }
-        });
+            new Swiper('.blog-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 25,
+                pagination: {
+                    el: '.blog-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                }
+            });
 
-        new Typed('#typewriter', {
-            strings: [
-                'perceraian di Pengadilan Agama',
-                'nafkah iddah & mut\'ah',
-                'hak asuh anak',
-                'pembagian harta bersama',
-                'sengketa waris',
-                'perwalian anak'
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
+            new Typed('#typewriter', {
+                strings: [
+                    'perceraian di Pengadilan Agama',
+                    'nafkah iddah & mut\'ah',
+                    'hak asuh anak',
+                    'pembagian harta bersama',
+                    'sengketa waris',
+                    'perwalian anak'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|'
+            });
         });
     </script>
 </body>
