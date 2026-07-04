@@ -431,7 +431,7 @@
                     <div class="service-icon"><i class="fas fa-gavel"></i></div>
                     <h3>Perceraian</h3>
                     <p>Penanganan perceraian baik yang diajukan suami (Cerai Talak) maupun istri (Cerai Gugat) dengan proses yang cepat dan sesuai syariah.</p>
-                    <a href="#contact" class="service-link">Konsultasi &rarr;</a>
+                    <a href="cerai-talak.html" class="service-link">Selengkapnya &rarr;</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
@@ -443,19 +443,19 @@
                     <div class="service-icon"><i class="fas fa-child"></i></div>
                     <h3>Hak Asuh Anak</h3>
                     <p>Penyelesaian sengketa hak asuh anak (hadhanah) dengan mempertimbangkan kepentingan terbaik anak sesuai hukum Islam.</p>
-                    <a href="#contact" class="service-link">Konsultasi &rarr;</a>
+                    <a href="hak-asuh-anak.html" class="service-link">Selengkapnya &rarr;</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3>Harta Bersama</h3>
                     <p>Pembagian harta bersama (gono-gini) setelah perceraian secara adil berdasarkan hukum Islam dan hukum perdata.</p>
-                    <a href="#contact" class="service-link">Konsultasi &rarr;</a>
+                    <a href="harta-bersama.html" class="service-link">Selengkapnya &rarr;</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Waris</h3>
                     <p>Penyelesaian sengketa warisan sesuai hukum Islam, termasuk pembagian waris menurut faraid dan wasiat.</p>
-                    <a href="#contact" class="service-link">Konsultasi &rarr;</a>
+                    <a href="waris.html" class="service-link">Selengkapnya &rarr;</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-icon"><i class="fas fa-user-shield"></i></div>
@@ -1199,7 +1199,7 @@
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script>
-    <script defer src="script.min.js"></script>
+    <script defer src="script.min.js?v=2"></script>
     <script>
         window.addEventListener('load', function() {
             setTimeout(function() {
@@ -1208,62 +1208,68 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 50
-            });
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50
+                });
+            }
 
-            new Swiper('.testimonials-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 25,
-                pagination: {
-                    el: '.testimonials-pagination',
-                    clickable: true
-                },
-                breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                },
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false
-                }
-            });
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.testimonials-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 25,
+                    pagination: {
+                        el: '.testimonials-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    },
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false
+                    }
+                });
 
-            new Swiper('.blog-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 25,
-                pagination: {
-                    el: '.blog-pagination',
-                    clickable: true
-                },
-                breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                },
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                }
-            });
+                new Swiper('.blog-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 25,
+                    pagination: {
+                        el: '.blog-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false
+                    }
+                });
+            }
 
-            new Typed('#typewriter', {
-                strings: [
-                    'perceraian di Pengadilan Agama',
-                    'nafkah iddah & mut\'ah',
-                    'hak asuh anak',
-                    'pembagian harta bersama',
-                    'sengketa waris',
-                    'perwalian anak'
-                ],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 2000,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|'
-            });
+            if (typeof Typed !== 'undefined') {
+                new Typed('#typewriter', {
+                    strings: [
+                        'perceraian di Pengadilan Agama',
+                        'nafkah iddah & mut\'ah',
+                        'hak asuh anak',
+                        'pembagian harta bersama',
+                        'sengketa waris',
+                        'perwalian anak'
+                    ],
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    backDelay: 2000,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }
         });
     </script>
 </body>

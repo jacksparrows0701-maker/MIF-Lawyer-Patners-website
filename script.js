@@ -1,37 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const backToTop = document.getElementById('backToTop');
-    const contactForm = document.getElementById('contactForm');
+    var navbar = document.getElementById('navbar');
+    var navToggle = document.getElementById('navToggle');
+    var navMenu = document.getElementById('navMenu');
+    var backToTop = document.getElementById('backToTop');
+    var contactForm = document.getElementById('contactForm');
+
+    function safeGet(id) { return document.getElementById(id); }
+
+    function safeGetItem(key) {
+        try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+
+    function safeSetItem(key, val) {
+        try { localStorage.setItem(key, val); } catch (e) {}
+    }
 
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
-
-        if (window.scrollY > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        if (backToTop) {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         }
     });
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-link').forEach(function(link) {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
         });
-    });
+
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
@@ -50,26 +65,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Stats counter animation
-    const statNumbers = document.querySelectorAll('.stat-number');
-    let animated = false;
+    var statNumbers = document.querySelectorAll('.stat-number');
+    var animated = false;
 
     function animateStats() {
         if (animated) return;
         
-        const statsSection = document.querySelector('.hero-stats');
+        var statsSection = document.querySelector('.hero-stats');
         if (!statsSection) return;
         
-        const rect = statsSection.getBoundingClientRect();
+        var rect = statsSection.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
             animated = true;
             
             statNumbers.forEach(function(stat) {
-                const target = parseInt(stat.getAttribute('data-target'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
+                var target = parseInt(stat.getAttribute('data-target'));
+                var duration = 2000;
+                var increment = target / (duration / 16);
+                var current = 0;
                 
-                const updateCounter = function() {
+                function updateCounter() {
                     current += increment;
                     if (current < target) {
                         stat.textContent = Math.floor(current);
@@ -77,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         stat.textContent = target;
                     }
-                };
+                }
                 
                 updateCounter();
             });
@@ -90,8 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(function(question) {
         question.addEventListener('click', function() {
-            const faqItem = this.parentElement;
-            const isActive = faqItem.classList.contains('active');
+            var faqItem = this.parentElement;
+            if (!faqItem) return;
+            var isActive = faqItem.classList.contains('active');
             
             document.querySelectorAll('.faq-item').forEach(function(item) {
                 item.classList.remove('active');
@@ -104,21 +120,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // WhatsApp modal
-    const waFloat = document.getElementById('waFloat');
-    const waFooter = document.getElementById('waFooter');
-    const waBtn1 = document.getElementById('waBtn1');
-    const waBtn2 = document.getElementById('waBtn2');
-    const waCancel = document.getElementById('waCancel');
-    const waModal = document.getElementById('waModal');
+    var waFloat = document.getElementById('waFloat');
+    var waFooter = document.getElementById('waFooter');
+    var waBtn1 = document.getElementById('waBtn1');
+    var waBtn2 = document.getElementById('waBtn2');
+    var waCancel = document.getElementById('waCancel');
+    var waModal = document.getElementById('waModal');
 
     function showWaModal() {
-        waModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        if (waModal) {
+            waModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     }
 
     function hideWaModal() {
-        waModal.classList.remove('active');
-        document.body.style.overflow = '';
+        if (waModal) {
+            waModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
 
     if (waFloat) {
@@ -171,18 +191,18 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var service = document.getElementById('service').value;
+            var message = document.getElementById('message').value;
             
             if (!name || !email || !phone || !service || !message) {
                 alert('Mohon lengkapi semua field yang diperlukan.');
                 return;
             }
             
-            const serviceNames = {
+            var serviceNames = {
                 'cerai-talak': 'Cerai Talak (Suami Menggugat)',
                 'cerai-gugat': 'Cerai Gugat (Istri Menggugat)',
                 'nafkah': 'Nafkah Iddah & Mut\'ah',
@@ -192,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'perwalian': 'Perwalian Anak'
             };
             
-            const serviceName = serviceNames[service] || service;
+            var serviceName = serviceNames[service] || service;
             
             window.waMessage = 'Assalamualaikum, saya ingin konsultasi hukum.%0A%0A' +
                 '*Nama:* ' + name + '%0A' +
@@ -207,39 +227,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    if (typeof IntersectionObserver !== 'undefined') {
+        var observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .process-step, .faq-item, .testimonial-card, .blog-card, .team-card, .about-content, .contact-grid, .maps-grid').forEach(function(el) {
+            el.classList.add('fade-in');
+            observer.observe(el);
         });
-    }, observerOptions);
-
-    document.querySelectorAll('.service-card, .process-step, .faq-item, .testimonial-card, .blog-card, .team-card, .about-content, .contact-grid, .maps-grid').forEach(function(el) {
-        el.classList.add('fade-in');
-        observer.observe(el);
-    });
+    }
 
     // Parallax effect on hero
     window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroLogo = document.querySelector('.hero-logo-bg');
+        var scrolled = window.pageYOffset;
+        var heroLogo = document.querySelector('.hero-logo-bg');
         if (heroLogo && scrolled < window.innerHeight) {
             heroLogo.style.transform = 'translate(-50%, calc(-50% + ' + (scrolled * 0.3) + 'px))';
         }
     });
 
-    // WA Tooltip Speech Bubble — 5× cycle
+    // WA Tooltip Speech Bubble
     var waTooltip = document.getElementById('waTooltip');
     var waTooltipClose = document.getElementById('waTooltipClose');
 
     if (waTooltip && waFloat) {
-        if (localStorage.getItem('waTooltipDismissed') === 'true') {
+        if (safeGetItem('waTooltipDismissed') === 'true') {
             waTooltip.style.display = 'none';
         } else {
             var showCount = 0;
@@ -273,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function dismissTooltip() {
-            localStorage.setItem('waTooltipDismissed', 'true');
+            safeSetItem('waTooltipDismissed', 'true');
             waTooltip.classList.add('disappear');
             setTimeout(function() {
                 waTooltip.classList.remove('show');
@@ -293,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (waTooltipText) {
             waTooltipText.style.cursor = 'pointer';
             waTooltipText.addEventListener('click', function() {
-                document.getElementById('waModal').classList.add('active');
+                if (waModal) waModal.classList.add('active');
                 dismissTooltip();
             });
         }
