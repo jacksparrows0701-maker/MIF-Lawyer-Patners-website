@@ -192,4 +192,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/perwalian.html</loc>
+        <lastmod>2026-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/nafkah-iddah-mutah.html</loc>
+        <lastmod>2026-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
