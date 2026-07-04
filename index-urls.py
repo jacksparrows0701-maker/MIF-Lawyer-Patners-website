@@ -11,7 +11,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 # === KONFIGURASI ===
-KEY_FILE = "gsc-service-account.json"
+KEY_FILE = r"C:\Users\LAWYER\secrets\gsc-service-account.json"
 SITEMAP_FILE = "sitemap.xml"
 SCOPES = ["https://www.googleapis.com/auth/indexing"]
 

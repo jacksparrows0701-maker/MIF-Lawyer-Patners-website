@@ -138,14 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (waBtn1) {
         waBtn1.addEventListener('click', function() {
             hideWaModal();
-            window.location.href = 'https://wa.me/6285759977665?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
+            window.location.href = 'https://wa.me/6281545454594?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
         });
     }
 
     if (waBtn2) {
         waBtn2.addEventListener('click', function() {
             hideWaModal();
-            window.location.href = 'https://wa.me/6281285313618?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
+            window.location.href = 'https://wa.me/6285119973606?text=' + encodeURIComponent(window.waMessage || 'Assalamualaikum, saya ingin konsultasi hukum.');
         });
     }
 

@@ -1029,7 +1029,7 @@ body {
     z-index: 998;
     box-shadow: var(--shadow);
 }
-.back-to-top.show {
+.back-to-top.visible {
     opacity: 1;
     visibility: visible;
 }
@@ -1076,7 +1076,7 @@ body {
     .about-content,
     .contact-wrapper { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
-    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: 1fr; }
     .team-photo { height: 300px; }
     .footer-grid { grid-template-columns: 1fr; }
