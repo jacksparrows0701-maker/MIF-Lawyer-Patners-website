@@ -66,6 +66,17 @@
         .content-text h3{color:#e8c547;font-size:1.2rem;margin-top:25px;margin-bottom:10px}
         .content-text ul{margin:10px 0;padding-left:20px}
         .content-text ul li{margin-bottom:8px}
+        .court-profile{background:#1a1a1a;border-radius:12px;padding:30px;margin:30px auto;max-width:800px;border-left:4px solid #e8c547}
+        .court-profile h3{color:#e8c547;font-size:1.2rem;margin-bottom:15px}
+        .court-profile .court-info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        .court-profile .court-info p{color:rgba(255,255,255,0.8);font-size:0.9rem}
+        .court-profile .court-info i{color:#e8c547;margin-right:8px}
+        .tips-section{background:#1a1a1a;border-radius:12px;padding:30px;margin:30px auto;max-width:800px}
+        .tips-section h3{color:#e8c547;font-size:1.1rem;margin-bottom:12px}
+        .tips-section ul{list-style:none;padding:0}
+        .tips-section ul li{padding:8px 0;color:rgba(255,255,255,0.8);font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05)}
+        .tips-section ul li:last-child{border-bottom:none}
+        .tips-section ul li::before{content:'✓ ';color:#e8c547;font-weight:bold}
         .keunggulan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;max-width:1000px;margin:0 auto}
         .keunggulan-card{text-align:center;padding:25px 15px;background:rgba(232,197,71,0.05);border-radius:10px;border:1px solid rgba(232,197,71,0.15)}
         .keunggulan-card i{font-size:2rem;color:#e8c547;margin-bottom:12px}
@@ -210,6 +221,32 @@
 
     <section class="section-darker">
         <div class="container">
+            <h2 class="section-title-light">Profil Pengadilan Agama Cimahi</h2>
+            <p class="section-subtitle-light">Pengadilan Agama yang melayani wilayah Bandung Barat</p>
+            <div class="court-profile">
+                <h3><i class="fas fa-landmark"></i> Pengadilan Agama Cimahi</h3>
+                <div class="court-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Dr. Naripan No.17, Cimahi, Jawa Barat</p>
+                    <p><i class="fas fa-phone"></i> (022) 6654123</p>
+                    <p><i class="fas fa-clock"></i> Senin-Kamis: 08.00-16.00, Jumat: 08.00-11.30</p>
+                    <p><i class="fas fa-globe"></i> Website: pa-cimahi.go.id</p>
+                </div>
+            </div>
+            <div class="tips-section">
+                <h3><i class="fas fa-lightbulb"></i> Tips Hukum untuk Warga Bandung Barat</h3>
+                <ul>
+                    <li>Warga Bandung Barat yang hendak mengajukan cerai harus mendaftar di Pengadilan Agama Cimahi karena yurisdiksinya mencakup seluruh Kabupaten Bandung Barat.</li>
+                    <li>Panjar biaya perkara di PA Cimahi mulai dari Rp500.000 untuk cerai talak dan Rp1.000.000 untuk cerai gugat, belum termasuk jasa pengacara.</li>
+                    <li>Persidangan cerai di PA Cimahi biasanya digelar setiap hari Selasa dan Kamis. Pastikan dokumen lengkap sebelum hari sidang.</li>
+                    <li>Untuk warga Padalarang dan Batujajar, jarak ke PA Cimahi sekitar 15-20 menit. Kami bisa mewakili Anda sehingga Anda tidak perlu bolak-balik ke pengadilan.</li>
+                    <li>Mediasi wajib dilakukan di PA Cimahi sebelum sidang cerai. Proses mediasi biasanya memakan waktu 1-2 minggu.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-darker">
+        <div class="container">
             <h2 class="section-title-light">Proses Mudah</h2>
             <p class="section-subtitle-light">4 langkah sederhana untuk menyelesaikan perceraian Anda</p>
             <div class="proses-steps">
@@ -268,6 +305,9 @@
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Berapa biaya pengacara perceraian di Bandung Barat?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Biaya kami transparan dan terjangkau. Cerai talak mulai Rp3.000.000, cerai gugat mulai Rp5.000.000. Hubungi kami untuk estimasi biaya kasus Anda.</p></div></div>
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Bagaimana cara konsultasi dengan pengacara Bandung Barat?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Anda dapat menghubungi kami via WhatsApp di 0815-4545-4594 atau 0851-1997-3606. Konsultasi GRATIS tanpa biaya.</p></div></div>
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Dokumen apa yang perlu dibawa untuk konsultasi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Untuk konsultasi awal, cukup bawa KTP, Kartu Keluarga, dan Buku Nikah. Untuk konsultasi online, siapkan foto dokumen-dokumen tersebut.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Bagaimana cara mendaftarkan cerai di PA Cimahi untuk warga Bandung Barat?</span><span class="toggle">+</span></div><div class="faq-answer"><p>-datang langsung ke PA Cimahi di Jl. Dr. Naripan No.17 Cimahi, bawa dokumen asli (KTP, KK, Buku Nikah, Akta Kelahiran Anak), isi surat gugatan atau talak di kepaniteraan, dan bayar panjar biaya perkara. Atau gunakan jasa kami agar prosesnya lebih mudah.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Berapa lama proses cerai di PA Cimahi untuk warga Bandung Barat?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Proses cerai talak di PA Cimahi biasanya 1-3 bulan, sedangkan cerai gugat 3-6 bulan tergantung kompleksitas kasus. Jika ada sengketa harta bersama atau hak asuh anak, proses bisa lebih lama.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Apakah harus hadir langsung ke PA Cimahi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Untuk cerai talak, suami bisa memberikan kuasa kepada pengacara. Untuk cerai gugat, istri harus hadir minimal di sidang pertama. Namun dengan menggunakan jasa kami, kami akan memandu Anda kapan harus hadir dan kapan bisa diwakilkan.</p></div></div>
         </div>
     </section>
 

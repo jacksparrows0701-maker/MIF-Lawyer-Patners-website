@@ -113,6 +113,17 @@
         .testimonial-card-landing .text{color:rgba(255,255,255,0.8);font-style:italic;margin-bottom:12px;line-height:1.6}
         .testimonial-card-landing .author{color:#e8c547;font-weight:bold;font-size:0.95rem}
         .testimonial-card-landing .from{color:rgba(255,255,255,0.5);font-size:0.85rem}
+        .court-profile{background:#1a1a1a;border-radius:12px;padding:30px;margin:30px auto;max-width:800px;border-left:4px solid #e8c547}
+        .court-profile h3{color:#e8c547;font-size:1.2rem;margin-bottom:15px}
+        .court-profile .court-info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        .court-profile .court-info p{color:rgba(255,255,255,0.8);font-size:0.9rem}
+        .court-profile .court-info i{color:#e8c547;margin-right:8px}
+        .tips-section{background:#1a1a1a;border-radius:12px;padding:30px;margin:30px auto;max-width:800px}
+        .tips-section h3{color:#e8c547;font-size:1.1rem;margin-bottom:12px}
+        .tips-section ul{list-style:none;padding:0}
+        .tips-section ul li{padding:8px 0;color:rgba(255,255,255,0.8);font-size:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05)}
+        .tips-section ul li:last-child{border-bottom:none}
+        .tips-section ul li::before{content:'✓ ';color:#e8c547;font-weight:bold}
         @media(max-width:768px){.landing-hero h1{font-size:1.8rem}.keunggulan-grid,.layanan-grid{grid-template-columns:repeat(2,1fr)}.hero-badges{gap:8px}.hero-badge{font-size:0.75rem;padding:6px 12px}}
         @media(max-width:480px){.landing-hero h1{font-size:1.5rem}.keunggulan-grid,.layanan-grid{grid-template-columns:1fr}}
     </style>
@@ -204,6 +215,32 @@
 
     <section class="section-darker">
         <div class="container">
+            <h2 class="section-title-light">Profil Pengadilan Agama Cimahi</h2>
+            <p class="section-subtitle-light">Pengadilan Agama yang melayani wilayah Kota Cimahi</p>
+            <div class="court-profile">
+                <h3><i class="fas fa-landmark"></i> Pengadilan Agama Cimahi</h3>
+                <div class="court-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Dr. Naripan No.17, Cimahi, Jawa Barat</p>
+                    <p><i class="fas fa-phone"></i> (022) 6654123</p>
+                    <p><i class="fas fa-clock"></i> Senin-Kamis: 08.00-16.00, Jumat: 08.00-11.30</p>
+                    <p><i class="fas fa-globe"></i> Website: pa-cimahi.go.id</p>
+                </div>
+            </div>
+            <div class="tips-section">
+                <h3><i class="fas fa-lightbulb"></i> Tips Hukum untuk Warga Cimahi</h3>
+                <ul>
+                    <li>Warga Kota Cimahi termasuk Cimahi Utara, Tengah, dan Selatan berada di bawah yurisdiksi Pengadilan Agama Cimahi. Tidak perlu ke pengadilan lain.</li>
+                    <li>PA Cimahi melayani perkara perceraian, waris, nafkah, harta bersama, dan isbat nikah untuk seluruh wilayah Kota Cimahi dan Kabupaten Bandung Barat.</li>
+                    <li>Jika Anda warga Citeureup atau Baros, jarak ke PA Cimahi sangat dekat, sekitar 5-10 menit perjalanan. Kami bisa mendampingi Anda selama proses persidangan.</li>
+                    <li>PA Cimahi menyediakan layanan e-court untuk pendaftaran perkara secara online. Namun, Anda tetap harus hadir untuk mediasi dan sidang.</li>
+                    <li>Untuk mediasi di PA Cimahi, datang 15 menit sebelum jadwal sidang. Bawa KTP asli dan surat nikah asli sebagai syarat wajib.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-darker">
+        <div class="container">
             <h2 class="section-title-light">Proses Mudah</h2>
             <p class="section-subtitle-light">4 langkah sederhana untuk menyelesaikan perceraian Anda</p>
             <div class="proses-steps">
@@ -262,6 +299,9 @@
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Berapa biaya pengacara perceraian di Cimahi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Biaya kami transparan dan terjangkau. Cerai talak mulai Rp3.000.000, cerai gugat mulai Rp5.000.000. Hubungi kami untuk estimasi biaya.</p></div></div>
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Bagaimana cara konsultasi dengan pengacara Cimahi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Hubungi kami via WhatsApp di 0815-4545-4594 atau 0851-1997-3606. Konsultasi GRATIS tanpa biaya.</p></div></div>
             <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Apakah bisa konsultasi online?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Ya, kami melayani konsultasi online via WhatsApp dan video call. Cocok untuk Anda yang berada di Cimahi atau kota lainnya.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Apakah warga Cimahi Utara dan Cimahi Tengah bisa daftar cerai di PA Cimahi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Ya, seluruh wilayah Kota Cimahi termasuk Cimahi Utara, Cimahi Tengah, dan Cimahi Selatan berada di bawah yurisdiksi PA Cimahi. Anda bisa langsung mendaftar di Jl. Dr. Naripan No.17.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Bagaimana jika domisili di Cimahi tapi nikah di kota lain?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Anda bisa mengajukan cerai di PA sesuai domisili terkini (Cimahi) dengan melampirkan surat keterangan pindah atau bukti domisili. Namun, ada opsi lain yaitu mengajukan di PA sesuai tempat nikah. Konsultasikan dengan kami untuk menentukan pilihan terbaik.</p></div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Berapa panjar biaya perkara di PA Cimahi?</span><span class="toggle">+</span></div><div class="faq-answer"><p>Panjar biaya perkara di PA Cimahi mulai dari Rp500.000 untuk cerai talak dan Rp1.000.000 untuk cerai gugat. Biaya ini belum termasuk jasa pengacara. Hubungi kami untuk estimasi total biaya yang lebih akurat.</p></div></div>
         </div>
     </section>
 
