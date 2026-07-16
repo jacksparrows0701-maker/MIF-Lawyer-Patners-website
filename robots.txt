@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /qr-cetak.html
+Disallow: /kartu-nama.html
+Disallow: /google3bc08536ef5ce186.html
 
 Sitemap: https://miflawandpatners.my.id/sitemap.xml

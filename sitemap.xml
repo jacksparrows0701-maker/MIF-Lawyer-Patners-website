@@ -1,207 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- HALAMAN UTAMA -->
     <url>
         <loc>https://miflawandpatners.my.id/</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- LAYANAN UTAMA -->
     <url>
         <loc>https://miflawandpatners.my.id/pengacara-perceraian-bandung.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://miflawandpatners.my.id/biaya-pengacara-perceraian.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://miflawandpatners.my.id/cerai-talak.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://miflawandpatners.my.id/cerai-gugat.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/hak-asuh-anak.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/harta-bersama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/waris.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/tentang-kami.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/pengacara-perceraian-bandung-barat.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/pengacara-perceraian-kabupaten-bandung.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/pengacara-perceraian-cimahi.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/5-hal-sebelum-cerai.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/hak-asuh-anak-islam.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/harta-bersama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/nafkah-iddah.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/isbat-nikah.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/waris-islam.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/mutah.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/hak-waris-anak-luar-nikah.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/mediasi-pengadilan-agama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/banding-pengadilan-agama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/biaya-perceraian-pengadilan-agama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/contoh-surat-gugatan-cerai.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/prosedur-cerai-pengadilan-agama.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/hak-nafkah-anak-cerai.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/cara-mengurus-surat-nikah.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/perbedaan-cerai-talak-gugat.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/sengketa-utang-perceraian.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/hak-waris-istri-islam.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/konsultasi-hukum-gratis-online.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/artikel/isbat-nikah-online.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://miflawandpatners.my.id/perwalian.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://miflawandpatners.my.id/nafkah-iddah-mutah.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/hak-asuh-anak.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/harta-bersama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/waris.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/perwalian.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- PERUSAHAAN -->
+    <url>
+        <loc>https://miflawandpatners.my.id/tentang-kami.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- WILAYAH -->
+    <url>
+        <loc>https://miflawandpatners.my.id/pengacara-perceraian-bandung-barat.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/pengacara-perceraian-kabupaten-bandung.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/pengacara-perceraian-cimahi.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ARTIKEL -->
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/5-hal-sebelum-cerai.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-asuh-anak-islam.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/harta-bersama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/nafkah-iddah.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/isbat-nikah.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/waris-islam.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/mutah.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-waris-anak-luar-nikah.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/mediasi-pengadilan-agama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/banding-pengadilan-agama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/biaya-perceraian-pengadilan-agama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/contoh-surat-gugatan-cerai.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/prosedur-cerai-pengadilan-agama.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-nafkah-anak-cerai.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/cara-mengurus-surat-nikah.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/perbedaan-cerai-talak-gugat.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/sengketa-utang-perceraian.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/hak-waris-istri-islam.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/konsultasi-hukum-gratis-online.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miflawandpatners.my.id/artikel/isbat-nikah-online.html</loc>
+        <lastmod>2026-07-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
